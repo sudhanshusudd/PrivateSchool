@@ -53,19 +53,26 @@ const Home = () => {
 
   return (
     <div className="space-y-0">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative container mx-auto px-4 py-20">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+
+      <section className="relative w-full text-white overflow-hidden">
+        <img
+          src="/hero.jpg"
+          alt="Hero"
+          className="w-full h-auto object-contain"
+        />
+
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+        <div className="absolute inset-0 flex items-center justify-center px-4">
+          <div className="max-w-4xl text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Welcome to <span className="text-yellow-400">Excellence School</span>
             </h1>
-            <p className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Nurturing Excellence, Building Future Leaders Through Quality Education, 
+            <p className="text-base sm:text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed">
+              Nurturing Excellence, Building Future Leaders Through Quality Education,
               Character Development, and Holistic Growth Since 1995.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-4">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-yellow-500 text-blue-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
@@ -107,7 +114,7 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Excellence School?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide a nurturing environment where students excel academically, 
+              We provide a nurturing environment where students excel academically,
               develop strong character, and prepare for a successful future.
             </p>
           </div>
