@@ -104,7 +104,7 @@ const SchoolRules = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Commitment to Excellence</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Excellence School is committed to providing a safe, inclusive, and supportive environment 
+              Buds Garden School is committed to providing a safe, inclusive, and supportive environment 
               where all students can learn and grow. These rules and guidelines are designed to ensure 
               mutual respect, academic integrity, and personal responsibility among all members of our 
               school community.
@@ -258,7 +258,7 @@ const SchoolRules = () => {
             </div>
             <div className="bg-gray-800 p-4 rounded-lg">
               <h3 className="font-semibold mb-2">Discipline Committee</h3>
-              <p className="text-gray-300">discipline@excellenceschool.edu.in</p>
+              <p className="text-gray-300">discipline@budsgardenschool.edu.in</p>
             </div>
           </div>
         </div>

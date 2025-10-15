@@ -397,7 +397,7 @@ const Gallery = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">A Day in Student Life</h3>
-                <p className="text-gray-600 text-sm">Experience a typical day at Excellence School through student eyes</p>
+                <p className="text-gray-600 text-sm">Experience a typical day at Buds Garden School through student eyes</p>
               </div>
             </div>
 

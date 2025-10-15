@@ -80,7 +80,7 @@ const HostelAdmission = () => {
   ];
 
   const eligibilityCriteria = [
-    'Must be a registered student of Excellence School',
+    'Must be a registered student of Buds Garden School',
     'Minimum 75% attendance in previous academic year',
     'No major disciplinary actions in academic record',
     'Medical fitness certificate required',
@@ -319,19 +319,19 @@ const HostelAdmission = () => {
             <div className="bg-gray-800 p-6 rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Admission Office</h3>
               <p className="text-gray-300 mb-1">+91 123-456-7897</p>
-              <p className="text-gray-300">admission@excellenceschool.edu.in</p>
+              <p className="text-gray-300">admission@budsgardenschool.edu.in</p>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Hostel Coordinator</h3>
               <p className="text-gray-300 mb-1">+91 123-456-7898</p>
-              <p className="text-gray-300">hostel.admission@excellenceschool.edu.in</p>
+              <p className="text-gray-300">hostel.admission@budsgardenschool.edu.in</p>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Fee Inquiry</h3>
               <p className="text-gray-300 mb-1">+91 123-456-7899</p>
-              <p className="text-gray-300">accounts@excellenceschool.edu.in</p>
+              <p className="text-gray-300">accounts@budsgardenschool.edu.in</p>
             </div>
           </div>
 

@@ -38,7 +38,7 @@ const ContactUs = () => {
     {
       icon: MapPin,
       title: 'Address',
-      details: ['123 Education Street', 'New Delhi, India 110001'],
+      details: ['Daludih, Rajganj, Dhanbad', 'Jharkhand, India 826006'],
       color: 'text-blue-600',
     },
     {
@@ -50,7 +50,7 @@ const ContactUs = () => {
     {
       icon: Mail,
       title: 'Email Addresses',
-      details: ['info@excellenceschool.edu.in', 'admissions@excellenceschool.edu.in'],
+      details: ['info@budsgardenschool.edu.in', 'admissions@budsgardenschool.edu.in'],
       color: 'text-purple-600',
     },
     {
@@ -65,42 +65,42 @@ const ContactUs = () => {
     {
       name: 'Admissions Office',
       phone: '+91 123-456-7891',
-      email: 'admissions@excellenceschool.edu.in',
+      email: 'admissions@budsgardenschool.edu.in',
       head: 'Mrs. Sunita Sharma',
       description: 'New student admissions and enrollment queries',
     },
     {
       name: 'Academic Office',
       phone: '+91 123-456-7892',
-      email: 'academic@excellenceschool.edu.in',
+      email: 'academic@budsgardenschool.edu.in',
       head: 'Dr. Rajesh Patel',
       description: 'Academic programs, curriculum, and student progress',
     },
     {
       name: 'Administration',
       phone: '+91 123-456-7893',
-      email: 'admin@excellenceschool.edu.in',
-      head: 'Mr. Amit Verma',
+      email: 'admin@budsgardenschool.edu.in',
+      head: 'Mr. Unknown',
       description: 'General administration and operational matters',
     },
     {
       name: 'Finance Department',
       phone: '+91 123-456-7894',
-      email: 'accounts@excellenceschool.edu.in',
+      email: 'accounts@budsgardenschool.edu.in',
       head: 'Mrs. Priya Gupta',
       description: 'Fee payments, financial assistance, and billing',
     },
     {
       name: 'Hostel Office',
       phone: '+91 123-456-7895',
-      email: 'hostel@excellenceschool.edu.in',
+      email: 'hostel@budsgardenschool.edu.in',
       head: 'Mr. Suresh Kumar',
       description: 'Hostel accommodation and residential services',
     },
     {
       name: 'Transport Department',
       phone: '+91 123-456-7896',
-      email: 'transport@excellenceschool.edu.in',
+      email: 'transport@budsgardenschool.edu.in',
       head: 'Mr. Vijay Singh',
       description: 'School bus services and transportation',
     },
@@ -298,21 +298,33 @@ const ContactUs = () => {
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Visit Our Campus</h3>
                 
-                {/* Google Maps Embed Placeholder */}
-                <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <MapPin size={48} className="text-gray-400 mx-auto mb-2" />
-                    <p className="text-gray-600">Interactive Map</p>
-                    <p className="text-sm text-gray-500">Google Maps integration would go here</p>
-                  </div>
-                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                            <iframe
+                                title="Buds Garden School Location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.598967899632!2d86.32314597443215!3d23.87727558452045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6a66fb2ad609d%3A0x1aff44c667d16a61!2sBuds%20Garden%20School%2C%20Daludih%2C%20Rajganj!5e0!3m2!1sen!2sin!4v1728573745336!5m2!1sen!2sin"
+                                width="100%"
+                                height="400"
+                                style={{ border: 0 }}
+                                
+                            ></iframe>
+                            <div className="p-4 text-center">
+                                <a
+                                    href="https://maps.google.com/?q=E-V8GG+W7 Dalludih, Jharkhand"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-teal-600 hover:text-teal-800 font-medium"
+                                >
+                                    View Larger Map
+                                </a>
+                            </div>
+                        </div>
 
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <MapPin size={20} className="text-blue-600 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">School Address</h4>
-                      <p className="text-gray-600">123 Education Street, New Delhi, India 110001</p>
+                      <p className="text-gray-600">Daludih , Rajganj , Dhanbad (Jharkhand)</p>
                     </div>
                   </div>
 
@@ -320,7 +332,7 @@ const ContactUs = () => {
                     <Building size={20} className="text-green-600 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Landmarks</h4>
-                      <p className="text-gray-600">Near Central Park, Opposite City Hospital</p>
+                      <p className="text-gray-600">Near Neetaji Petrol Pump</p>
                     </div>
                   </div>
                 </div>

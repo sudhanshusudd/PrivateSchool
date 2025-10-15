@@ -24,9 +24,9 @@ const ChairmanMessage = () => {
                 <div className="w-64 h-64 mx-auto bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
                   <span className="text-gray-500">Chairman Photo</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Dr. Rajesh Kumar</h3>
-                <p className="text-lg text-gray-600">Chairman & Founder</p>
-                <p className="text-sm text-gray-500 mt-2">M.Ed, Ph.D in Educational Leadership</p>
+                <h3 className="text-2xl font-bold text-gray-900">Mr. Amar Kumar Pal</h3>
+                <p className="text-lg text-gray-600">Chairman</p>
+                <p className="text-sm text-gray-500 mt-2"></p>
               </div>
 
               {/* Message Content */}
@@ -47,7 +47,7 @@ const ChairmanMessage = () => {
                   </p>
 
                   <p>
-                    When I founded Excellence School in 1995, I had a simple yet profound vision: 
+                    When I founded Buds Garden School in 2009, I had a simple yet profound vision: 
                     to create an institution where every child could discover their potential, 
                     develop their talents, and grow into confident, capable, and compassionate 
                     individuals who would make a positive difference in the world.
@@ -97,8 +97,8 @@ const ChairmanMessage = () => {
                   </p>
 
                   <div className="mt-8">
-                    <p className="font-bold text-xl text-blue-900">Dr. Rajesh Kumar</p>
-                    <p className="text-gray-600">Chairman & Founder, Excellence School</p>
+                    <p className="font-bold text-xl text-blue-900">Mr. Amar Kumar Pal</p>
+                    <p className="text-gray-600">Chairman, Buds Garden School</p>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ const ChairmanMessage = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-blue-600 mb-4">Educational Leadership</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• 30+ years of experience in educational administration</li>
+                  <li>• 22+ years of experience in educational administration</li>
                   <li>• Founded 3 successful educational institutions</li>
                   <li>• Member of State Education Advisory Board</li>
                   <li>• Consultant for CBSE curriculum development</li>

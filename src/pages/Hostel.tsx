@@ -318,14 +318,14 @@ const Hostel = () => {
               <h3 className="text-lg font-semibold mb-2">Hostel Warden (Boys)</h3>
               <p className="text-gray-300 mb-1">Mr. Suresh Patel</p>
               <p className="text-gray-300 mb-1">+91 123-456-7894</p>
-              <p className="text-gray-300">boys.hostel@excellenceschool.edu.in</p>
+              <p className="text-gray-300">boys.hostel@budsgardenschool.edu.in</p>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Hostel Warden (Girls)</h3>
               <p className="text-gray-300 mb-1">Mrs. Meena Sharma</p>
               <p className="text-gray-300 mb-1">+91 123-456-7895</p>
-              <p className="text-gray-300">girls.hostel@excellenceschool.edu.in</p>
+              <p className="text-gray-300">girls.hostel@budsgardenschool.edu.in</p>
             </div>
           </div>
         </div>

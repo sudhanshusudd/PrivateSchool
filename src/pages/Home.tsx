@@ -56,7 +56,7 @@ const Home = () => {
 
       <section className="relative w-full text-white overflow-hidden">
         <img
-          src="/hero.jpg"
+          src="/hero.png"
           alt="Hero"
           className="w-full h-auto object-contain"
         />
@@ -65,14 +65,14 @@ const Home = () => {
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="max-w-4xl text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Welcome to <span className="text-yellow-400">Excellence School</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight -mt-[450px] whitespace-nowrap">
+              Welcome to <span className="text-yellow-400">Buds Garden School</span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl">
               Nurturing Excellence, Building Future Leaders Through Quality Education,
-              Character Development, and Holistic Growth Since 1995.
+              Character Development, and Holistic Growth Since 2009.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-4">
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-4 mt-[200px]">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-yellow-500 text-blue-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
@@ -112,7 +112,7 @@ const Home = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Excellence School?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Buds Garden School?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We provide a nurturing environment where students excel academically,
               develop strong character, and prepare for a successful future.

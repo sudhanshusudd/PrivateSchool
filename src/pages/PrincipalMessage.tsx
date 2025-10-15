@@ -24,7 +24,7 @@ const PrincipalMessage = () => {
                 <div className="w-64 h-64 mx-auto bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
                   <span className="text-gray-500">Principal Photo</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Mrs. Priya Sharma</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Mr. Pramod Kumar</h3>
                 <p className="text-lg text-gray-600">Principal</p>
                 <p className="text-sm text-gray-500 mt-2">M.A, B.Ed, 25 years experience</p>
               </div>
@@ -47,7 +47,7 @@ const PrincipalMessage = () => {
                   </p>
 
                   <p>
-                    As the Principal of Excellence School, I am honored to lead an institution 
+                    As the Principal of Buds Garden School, I am honored to lead an institution 
                     that has consistently demonstrated its commitment to educational excellence 
                     and holistic development. Our school is not just a place of learning; it's 
                     a community where dreams take shape and futures are built.
@@ -55,7 +55,7 @@ const PrincipalMessage = () => {
 
                   <p>
                     Education in the 21st century demands a balance between traditional wisdom 
-                    and modern innovation. At Excellence School, we strive to provide our 
+                    and modern innovation. At Buds Garden School, we strive to provide our 
                     students with a comprehensive education that includes academic rigor, 
                     character development, creative expression, and physical wellness. We 
                     believe that true education prepares students not just for examinations, 
@@ -102,8 +102,8 @@ const PrincipalMessage = () => {
                   </p>
 
                   <div className="mt-8">
-                    <p className="font-bold text-xl text-green-700">Mrs. Priya Sharma</p>
-                    <p className="text-gray-600">Principal, Excellence School</p>
+                    <p className="font-bold text-xl text-green-700">Mr. Pramod Kumar</p>
+                    <p className="text-gray-600">Principal, Buds Garden School</p>
                   </div>
                 </div>
               </div>

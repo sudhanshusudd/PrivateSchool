@@ -58,16 +58,16 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
                 <Phone size={14} />
-                <span>+91 123-456-7890</span>
+                <span>+91 9431376581 , +91 7631130006</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Mail size={14} />
-                <span>info@excellenceschool.edu.in</span>
+                <span>info@budsgardenschool.edu.in</span>
               </div>
             </div>
             <div className="flex items-center space-x-1">
               <MapPin size={14} />
-              <span>Excellence School, New Delhi, India</span>
+              <span>Buds Garden School, Daludih, India</span>
             </div>
           </div>
         </div>
@@ -77,11 +77,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">ES</span>
+            <div className="w-12 h-12 bg-white-600 rounded-full flex items-center justify-center">
+              {/* <span className="text-white font-bold text-xl">ES</span> */}
+              <img src="/logo.png" alt="ES Logo" className="h-10 w-auto inline-block" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-blue-900">Excellence School</h1>
+              <h1 className="text-2xl font-bold text-blue-900">Buds Garden School</h1>
               <p className="text-sm text-gray-600">Nurturing Excellence, Building Future</p>
             </div>
           </Link>

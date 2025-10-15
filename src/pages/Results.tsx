@@ -392,7 +392,7 @@ const Results = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Celebrate Success with Us</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join Excellence School and be part of our legacy of academic achievement
+            Join Buds Garden and be part of our legacy of academic achievement
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">

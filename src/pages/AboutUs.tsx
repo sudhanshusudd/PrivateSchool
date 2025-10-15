@@ -30,9 +30,9 @@ const AboutUs = () => {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-5xl font-bold mb-6">About Excellence School</h1>
+            <h1 className="text-5xl font-bold mb-6">About Buds Garden School</h1>
             <p className="text-xl text-blue-100 leading-relaxed">
-              Established in 1995, Excellence School has been a beacon of quality education, 
+              Established in 2009, Buds Garden School has been a beacon of quality education, 
               nurturing young minds and shaping future leaders for nearly three decades.
             </p>
           </div>
@@ -47,7 +47,7 @@ const AboutUs = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Excellence School was founded with a vision to provide world-class education 
+                  Buds Garden School was founded with a vision to provide world-class education 
                   that goes beyond textbooks. Our commitment to academic excellence, character 
                   building, and holistic development has made us one of the most trusted 
                   educational institutions in the region.

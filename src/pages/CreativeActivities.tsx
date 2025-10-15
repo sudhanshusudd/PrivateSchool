@@ -37,7 +37,7 @@ const CreativeActivities = () => {
       name: 'Creative Writing',
       icon: Feather,
       description: 'Poetry, short stories, and literary expression',
-      instructor: 'Mr. Amit Verma',
+      instructor: 'Mr. Unknown',
       schedule: 'Mon, Thu - 4:00 PM',
       ageGroups: ['10+ years'],
       achievements: ['Published Young Authors', 'Literary Magazine Contributors'],

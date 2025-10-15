@@ -4,29 +4,29 @@ import { Users, Mail, Phone, Award, BookOpen, Star } from 'lucide-react';
 const Administration = () => {
   const leadership = [
     {
-      name: 'Dr. Rajesh Kumar',
-      position: 'Chairman & Founder',
-      qualification: 'Ph.D in Educational Leadership',
-      experience: '30+ years',
-      email: 'chairman@excellenceschool.edu.in',
-      phone: '+91 123-456-7890',
+      name: 'Mr. Amar Kumar Pal',
+      position: 'Chairman',
+      qualification: '',
+      experience: '22+ years',
+      email: 'chairman@budsgardenschool.edu.in',
+      phone: '+91 9431376581 , +91 7631130006',
       description: 'Visionary leader committed to educational excellence and holistic development.',
     },
     {
-      name: 'Mrs. Priya Sharma',
+      name: 'Mr. Pramod Kumar',
       position: 'Principal',
       qualification: 'M.A, B.Ed',
       experience: '25 years',
-      email: 'principal@excellenceschool.edu.in',
+      email: 'principal@budsgardenschool.edu.in',
       phone: '+91 123-456-7891',
       description: 'Experienced educator focused on student-centered learning and academic achievement.',
     },
     {
-      name: 'Mr. Amit Verma',
+      name: 'Mr. Unknown',
       position: 'Vice Principal',
       qualification: 'M.Sc, B.Ed',
       experience: '20 years',
-      email: 'vp@excellenceschool.edu.in',
+      email: 'vp@budsgardenschool.edu.in',
       phone: '+91 123-456-7892',
       description: 'Dedicated administrator overseeing daily operations and student discipline.',
     },
@@ -284,19 +284,19 @@ const Administration = () => {
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Academic Office</h3>
               <p className="text-gray-300 mb-2">+91 123-456-7891</p>
-              <p className="text-gray-300">academic@excellenceschool.edu.in</p>
+              <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Administration Office</h3>
               <p className="text-gray-300 mb-2">+91 123-456-7892</p>
-              <p className="text-gray-300">admin@excellenceschool.edu.in</p>
+              <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">HR Department</h3>
               <p className="text-gray-300 mb-2">+91 123-456-7893</p>
-              <p className="text-gray-300">hr@excellenceschool.edu.in</p>
+              <p className="text-gray-300">hr@budsgardenschool.edu.in</p>
             </div>
           </div>
         </div>

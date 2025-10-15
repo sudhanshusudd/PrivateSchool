@@ -11,9 +11,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-blue-900 font-bold">ES</span>
+                {/* <span className="text-blue-900 font-bold">ES</span> */}
+                <img src="/logo.png" alt="ES Logo" className="h-6 w-auto inline-block" />
               </div>
-              <h3 className="text-xl font-bold">Excellence School</h3>
+              <h3 className="text-xl font-bold">Buds Garden School</h3>
             </div>
             <p className="text-blue-100 mb-4">
               Committed to providing world-class education and nurturing tomorrow's leaders with values, knowledge, and skills.
@@ -56,15 +57,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin size={18} />
-                <span className="text-blue-100">123 Education Street, New Delhi, India 110001</span>
+                <span className="text-blue-100">Daludih, Rajganj, India, 735134</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={18} />
-                <span className="text-blue-100">+91 123-456-7890</span>
+                <span className="text-blue-100">+91 9431376581 , +91 7631130006</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={18} />
-                <span className="text-blue-100">info@excellenceschool.edu.in</span>
+                <span className="text-blue-100">info@budsgardenschool.edu.in</span>
               </div>
             </div>
           </div>
@@ -72,7 +73,7 @@ const Footer = () => {
 
         <div className="border-t border-blue-800 mt-8 pt-8 text-center">
           <p className="text-blue-100">
-            © 2024 Excellence School. All rights reserved. | Designed for educational excellence.
+            © 2025 Buds Garden School. All rights reserved. | Designed for educational excellence.
           </p>
         </div>
       </div>
