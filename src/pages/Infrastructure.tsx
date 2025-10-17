@@ -35,8 +35,8 @@ const Infrastructure = () => {
     },
     {
       icon: Utensils,
-      title: 'Cafeteria',
-      description: 'Hygienic cafeteria serving nutritious meals prepared by trained staff.',
+      title: 'ATAL Tinkering Lab',
+      description: 'Inovation - Along with STEM education.',
       features: ['Nutritious Meals', 'Hygienic Kitchen', 'Varied Menu', 'Special Diets'],
     },
   ];
@@ -45,7 +45,7 @@ const Infrastructure = () => {
     { icon: Wifi, title: 'High-Speed Wi-Fi', description: 'Campus-wide internet connectivity' },
     { icon: Bus, title: 'Transportation', description: 'GPS-enabled school buses covering entire city' },
     { icon: Building, title: 'Medical Room', description: '24/7 medical assistance with qualified nurse' },
-    { icon: BookOpen, title: 'Auditorium', description: '500-seater modern auditorium for events' },
+    { icon: BookOpen, title: 'Auditorium', description: '250-seater modern auditorium for events' },
   ];
 
   return (
@@ -145,19 +145,19 @@ const Infrastructure = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">15</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">10</div>
               <div className="text-blue-200">Acres Campus</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">100+</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">35+</div>
               <div className="text-blue-200">Classrooms</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">25</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">10</div>
               <div className="text-blue-200">Laboratories</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">10+</div>
               <div className="text-blue-200">School Buses</div>
             </div>
           </div>

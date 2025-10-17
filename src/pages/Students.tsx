@@ -1,73 +1,76 @@
-import React from 'react';
-import { Users, Trophy, BookOpen, Star, Award, TrendingUp } from 'lucide-react';
+import React from "react";
+import { Users, Trophy, BookOpen, Award, TrendingUp } from "lucide-react";
 
 const Students = () => {
   const studentStats = [
-    { number: '2,500+', label: 'Total Students', icon: Users },
-    { number: '25:1', label: 'Student-Teacher Ratio', icon: BookOpen },
-    { number: '15+', label: 'Countries Represented', icon: Star },
-    { number: '98%', label: 'University Acceptance', icon: TrendingUp },
+    { number: "2,000+", label: "Total Students", icon: Users },
+    { number: "14:1", label: "Student-Teacher Ratio", icon: BookOpen },
+    // { number: '15+', label: 'Countries Represented', icon: Star },
+    { number: "98%", label: "University Acceptance", icon: TrendingUp },
   ];
 
   const studentAchievements = [
     {
-      title: 'Academic Excellence',
-      description: 'Our students consistently achieve top ranks in CBSE examinations',
+      title: "Academic Excellence",
+      description:
+        "Our students consistently achieve top ranks in CBSE examinations",
       achievements: [
-        '100% pass rate in Class X and XII for 5 consecutive years',
-        '25+ state toppers in various subjects',
-        '95% students score above 80% in board examinations',
-        'Multiple students selected in JEE Main and NEET',
+        "100% pass rate in Class X and XII for 3 consecutive years",
+        // "25+ state toppers in various subjects",
+        "95% students score above 80% in board examinations",
+        "Multiple students selected in JEE Main and NEET",
       ],
     },
     {
-      title: 'Sports Achievements',
-      description: 'Outstanding performance in inter-school and state-level competitions',
+      title: "Sports Achievements",
+      description:
+        "Outstanding performance in inter-school and state-level competitions",
       achievements: [
-        'State Champions in Basketball (2023)',
-        'Regional Winners in Cricket Tournament',
-        'Multiple medals in Swimming Championships',
-        '50+ students selected for district sports teams',
+        "State Champions in Basketball (2023)",
+        "Regional Winners in Cricket Tournament",
+        "Multiple medals in Swimming Championships",
+        "50+ students selected for district sports teams",
       ],
     },
     {
-      title: 'Cultural Activities',
-      description: 'Recognition in arts, music, dance, and literary competitions',
+      title: "Cultural Activities",
+      description:
+        "Recognition in arts, music, dance, and literary competitions",
       achievements: [
-        'First Prize in Inter-School Drama Competition',
-        'Winners of Classical Music Festival',
-        'Multiple awards in painting and sculpture',
-        'Published authors in school literary magazine',
+        "First Prize in Inter-School Drama Competition",
+        "Winners of Classical Music Festival",
+        "Multiple awards in painting and sculpture",
+        "Published authors in school literary magazine",
       ],
     },
   ];
 
   const studentSupport = [
     {
-      title: 'Academic Support',
+      title: "Academic Support",
       services: [
-        'Remedial classes for struggling students',
-        'Advanced programs for gifted students',
-        'Career counseling and guidance',
-        'Study skills workshops',
+        "Remedial classes for struggling students",
+        "Advanced programs for gifted students",
+        "Career counseling and guidance",
+        "Study skills workshops",
       ],
     },
     {
-      title: 'Personal Development',
+      title: "Personal Development",
       services: [
-        'Leadership development programs',
-        'Peer mentoring systems',
-        'Personality development workshops',
-        'Communication skills training',
+        "Leadership development programs",
+        "Peer mentoring systems",
+        "Personality development workshops",
+        "Communication skills training",
       ],
     },
     {
-      title: 'Health & Wellness',
+      title: "Health & Wellness",
       services: [
-        '24/7 medical support on campus',
-        'Regular health check-ups',
-        'Counseling and psychological support',
-        'Nutrition and fitness programs',
+        "24/7 medical support on campus",
+        "Regular health check-ups",
+        "Counseling and psychological support",
+        "Nutrition and fitness programs",
       ],
     },
   ];
@@ -79,29 +82,41 @@ const Students = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-6">Our Students</h1>
           <p className="text-xl text-blue-100">
-            Nurturing the next generation of leaders, innovators, and global citizens
+            Nurturing the next generation of leaders, innovators, and global
+            citizens
           </p>
         </div>
       </section>
 
       {/* Student Statistics */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
+          {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Student Community</h2>
-            <p className="text-xl text-gray-600">A diverse and vibrant community of learners</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Student Community
+            </h2>
+            <p className="text-xl text-gray-600">
+              A diverse and vibrant community of learners
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Stats Grid — 3 per row with equal spacing */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {studentStats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <Icon size={40} className="text-blue-600" />
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 text-lg">{stat.label}</div>
                 </div>
               );
             })}
@@ -113,8 +128,12 @@ const Students = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Student Achievements</h2>
-            <p className="text-xl text-gray-600">Celebrating excellence in academics, sports, and arts</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Student Achievements
+            </h2>
+            <p className="text-xl text-gray-600">
+              Celebrating excellence in academics, sports, and arts
+            </p>
           </div>
 
           <div className="space-y-8">
@@ -123,7 +142,9 @@ const Students = () => {
                 <div className="flex items-center mb-6">
                   <Trophy size={32} className="text-yellow-500 mr-4" />
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {category.title}
+                    </h3>
                     <p className="text-gray-600">{category.description}</p>
                   </div>
                 </div>
@@ -131,7 +152,10 @@ const Students = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {category.achievements.map((achievement, idx) => (
                     <div key={idx} className="flex items-start">
-                      <Award size={20} className="text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <Award
+                        size={20}
+                        className="text-green-500 mr-3 mt-1 flex-shrink-0"
+                      />
                       <p className="text-gray-700">{achievement}</p>
                     </div>
                   ))}
@@ -146,14 +170,20 @@ const Students = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Student Support Services</h2>
-            <p className="text-xl text-gray-600">Comprehensive support for holistic development</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Student Support Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive support for holistic development
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {studentSupport.map((support, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{support.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {support.title}
+                </h3>
                 <ul className="space-y-3">
                   {support.services.map((service, idx) => (
                     <li key={idx} className="flex items-start">
@@ -169,7 +199,7 @@ const Students = () => {
       </section>
 
       {/* Student Life */}
-      <section className="py-16 bg-blue-50">
+      {/* <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -228,31 +258,38 @@ const Students = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Alumni Success */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Our Alumni Success Stories</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Our Alumni Success Stories
+          </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Our graduates have gone on to excel in top universities and leading careers worldwide
+            Our graduates have gone on to excel in top universities and leading
+            careers worldwide
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">
+                200+
+              </div>
               <div className="text-blue-200">Engineering Graduates</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">200+</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">
+                100+
+              </div>
               <div className="text-blue-200">Medical Professionals</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">150+</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50+</div>
               <div className="text-blue-200">Business Leaders</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">100+</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">10+</div>
               <div className="text-blue-200">Research Scientists</div>
             </div>
           </div>

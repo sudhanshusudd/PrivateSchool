@@ -42,9 +42,10 @@ const Header = () => {
       href: '/activities',
       children: [
         { name: 'Physical Activities', href: '/activities/physical' },
-        { name: 'Creative Activities', href: '/activities/creative' },
+        // { name: 'Creative Activities', href: '/activities/creative' },
       ],
     },
+    { name: 'MPD', href: '/mpd' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact Us', href: '/contact' },
   ];

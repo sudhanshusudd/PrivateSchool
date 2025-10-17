@@ -22,9 +22,9 @@ const Administration = () => {
       description: 'Experienced educator focused on student-centered learning and academic achievement.',
     },
     {
-      name: 'Mr. Unknown',
+      name: 'Mrs. Babita Rani',
       position: 'Vice Principal',
-      qualification: 'M.Sc, B.Ed',
+      qualification: 'M.A, B.Ed',
       experience: '20 years',
       email: 'vp@budsgardenschool.edu.in',
       phone: '+91 123-456-7892',
@@ -47,8 +47,8 @@ const Administration = () => {
     },
     {
       name: 'Administrative Services',
-      head: 'Mr. Rajesh Gupta',
-      staff: 15,
+      head: 'Mrs. Gouri Pramod',
+      staff: 14,
       subjects: ['Finance', 'Human Resources', 'Student Records', 'Transportation'],
     },
     {
@@ -273,34 +273,33 @@ const Administration = () => {
       </section>
 
       {/* Contact Administration */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Contact Administration</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            For administrative matters, academic inquiries, or to schedule meetings
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Academic Office</h3>
-              <p className="text-gray-300 mb-2">+91 123-456-7891</p>
-              <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
-            </div>
-            
-            <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Administration Office</h3>
-              <p className="text-gray-300 mb-2">+91 123-456-7892</p>
-              <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
-            </div>
-            
-            <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">HR Department</h3>
-              <p className="text-gray-300 mb-2">+91 123-456-7893</p>
-              <p className="text-gray-300">hr@budsgardenschool.edu.in</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="py-16 bg-gray-900 text-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold mb-6">Contact Administration</h2>
+    <p className="text-xl text-gray-300 mb-8">
+      For administrative matters, academic inquiries, or to schedule meetings
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+      <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <h3 className="text-lg font-semibold mb-2 text-blue-400">
+          Academic Office
+        </h3>
+        <p className="text-gray-300 mb-2">+91 123-456-7891</p>
+        <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
+      </div>
+
+      <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <h3 className="text-lg font-semibold mb-2 text-blue-400">
+          Administration Office
+        </h3>
+        <p className="text-gray-300 mb-2">+91 123-456-7892</p>
+        <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

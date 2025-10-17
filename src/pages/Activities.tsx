@@ -76,14 +76,14 @@ const Activities = () => {
       color: 'bg-blue-600',
       activities: ['Basketball', 'Cricket', 'Football', 'Athletics', 'Swimming', 'Badminton'],
     },
-    {
-      icon: Palette,
-      title: 'Creative Activities',
-      description: 'Arts, music, drama, and creative expression programs to nurture artistic talents.',
-      link: '/activities/creative',
-      color: 'bg-purple-600',
-      activities: ['Painting', 'Music', 'Drama', 'Dance', 'Sculpture', 'Creative Writing'],
-    },
+    // {
+    //   icon: Palette,
+    //   title: 'Creative Activities',
+    //   description: 'Arts, music, drama, and creative expression programs to nurture artistic talents.',
+    //   link: '/activities/creative',
+    //   color: 'bg-purple-600',
+    //   activities: ['Painting', 'Music', 'Drama', 'Dance', 'Sculpture', 'Creative Writing'],
+    // },
   ];
 
   return (
@@ -116,7 +116,7 @@ const Activities = () => {
           </div>
 
           {/* Activity Categories */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1  gap-8">
             {activityCategories.map((category, index) => {
               const Icon = category.icon;
               return (

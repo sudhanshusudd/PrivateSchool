@@ -1,0 +1,124 @@
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+
+const DocumentInformation = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // ✅ Sidebar Quick Links
+  const quickLinks = [
+    { title: "GENERAL INFORMATION", path: "/mpd" },
+    { title: "DOCUMENT & INFORMATION", path: "/documentInformation" },
+    { title: "RESULT AND ACADEMICS", path: "/resultAcademics" },
+    { title: "STAFF (TEACHING)", path: "/staffTeaching" },
+    { title: "SCHOOL INFRASTRUCTURE", path: "/schoolInfrastructure" },
+  ];
+
+  // ✅ Handle PDF open from public folder
+  const handleOpenPDF = () => {
+    window.open("/schoolFee.pdf", "_blank");
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <section
+        className="relative bg-cover bg-center py-24 text-white"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-5xl font-bold mb-2 tracking-wide uppercase">
+            Document & Information
+          </h1>
+          <p className="text-gray-200 text-lg">
+            Home <span className="text-blue-300">// Document & Information</span>
+          </p>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="container mx-auto px-6 lg:px-12 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+          {/* Sidebar */}
+          <aside className="lg:col-span-1">
+            <h2 className="font-bold text-gray-800 mb-4 text-lg border-b pb-2">
+              QUICK LINK
+            </h2>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <li
+                    key={index}
+                    onClick={() => navigate(link.path)}
+                    className={`flex items-center justify-between px-4 py-3 text-sm font-medium rounded-md cursor-pointer border transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-600 text-white border-blue-700 shadow-sm"
+                        : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
+                    }`}
+                  >
+                    <span>{link.title}</span>
+                    <ChevronRight
+                      size={16}
+                      className={`${isActive ? "text-white" : "text-gray-500"}`}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </aside>
+
+          {/* Document Table */}
+          <div className="lg:col-span-3 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+            <h2 className="text-2xl font-bold text-gray-800 px-6 py-4 border-b bg-gray-50">
+              DOCUMENT & INFORMATION
+            </h2>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border text-sm text-left">
+                <thead>
+                  <tr className="bg-[#0d0743] text-white uppercase text-sm">
+                    <th className="px-4 py-3 border w-20">Sl. No.</th>
+                    <th className="px-4 py-3 border">
+                      Documents and Information
+                    </th>
+                    <th className="px-4 py-3 border w-48 text-center">
+                      Upload Documents
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr className="border hover:bg-gray-50">
+                    <td className="px-4 py-3 border text-center font-medium">
+                      1
+                    </td>
+                    <td className="px-4 py-3 border">
+                      COPIES OF AFFILIATION/UPGRADATION LETTER AND RECENT
+                      EXTENSION OF AFFILIATION IF ANY
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={handleOpenPDF}
+                        className="bg-blue-600 text-white px-4 py-1.5 rounded border border-blue-700 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default DocumentInformation;

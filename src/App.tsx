@@ -18,7 +18,12 @@ import HostelAdmission from './pages/HostelAdmission';
 import Results from './pages/Results';
 import Activities from './pages/Activities';
 import PhysicalActivities from './pages/PhysicalActivities';
-import CreativeActivities from './pages/CreativeActivities';
+// import CreativeActivities from './pages/CreativeActivities';
+import MPD from './pages/MPD';
+import DocumentInformation from './pages/documentInformation';
+import ResultAcademics from './pages/resultAcademics';
+import StaffTeaching from './pages/staffTeaching';
+import SchoolInfrastructure from './pages/schoolInfrastructure';  
 import Gallery from './pages/Gallery';
 import ContactUs from './pages/ContactUs';
 
@@ -45,7 +50,12 @@ function App() {
             <Route path="/results" element={<Results />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/activities/physical" element={<PhysicalActivities />} />
-            <Route path="/activities/creative" element={<CreativeActivities />} />
+            {/* <Route path="/activities/creative" element={<CreativeActivities />} /> */}
+            <Route path="/mpd" element={<MPD />} />
+            <Route path="/documentInformation" element={<DocumentInformation />} />
+            <Route path="/resultAcademics" element={<ResultAcademics />} />
+            <Route path="/staffTeaching" element={<StaffTeaching />} />
+            <Route path="/schoolInfrastructure" element={<SchoolInfrastructure />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<ContactUs />} />
           </Routes>
