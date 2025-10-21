@@ -145,10 +145,10 @@ const Gallery = () => {
   });
 
   const stats = [
-    { number: '500+', label: 'Photos' },
-    { number: '50+', label: 'Videos' },
-    { number: '25+', label: 'Events Covered' },
-    { number: '5', label: 'Years Archive' },
+    { number: '100+', label: 'Photos' },
+    { number: '10+', label: 'Videos' },
+    { number: '15+', label: 'Events Covered' },
+    { number: '3', label: 'Years Archive' },
   ];
 
   return (
@@ -181,7 +181,7 @@ const Gallery = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 bg-gray-100">
+      {/* <section className="py-8 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center gap-4">
             <div className="flex items-center space-x-4">
@@ -225,7 +225,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Category Tabs */}
       <section className="py-8 bg-white">
@@ -355,7 +355,7 @@ const Gallery = () => {
       </section>
 
       {/* Video Highlights */}
-      <section className="py-16 bg-teal-50">
+      {/* <section className="py-16 bg-teal-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Video Highlights</h2>
@@ -421,7 +421,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-teal-600 to-blue-600 text-white">

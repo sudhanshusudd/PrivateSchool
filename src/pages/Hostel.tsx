@@ -118,7 +118,7 @@ const Hostel = () => {
       </section>
 
       {/* Room Types */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Accommodation Options</h2>
@@ -155,7 +155,7 @@ const Hostel = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Facilities Details */}
       <section className="py-16 bg-orange-50">
@@ -216,7 +216,7 @@ const Hostel = () => {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    Nutritious meals prepared by qualified chefs
+                    Nutritious meals
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
@@ -267,7 +267,7 @@ const Hostel = () => {
             <p className="text-xl text-gray-600">Learn more about hostel policies and admission process</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-4xl mx-auto">
             <Link
               to="/hostel/rules"
               className="bg-white border-2 border-gray-200 rounded-lg p-8 text-center hover:border-orange-500 hover:shadow-lg transition-all group"
@@ -285,7 +285,7 @@ const Hostel = () => {
               </div>
             </Link>
 
-            <Link
+            {/* <Link
               to="/hostel/admission"
               className="bg-white border-2 border-gray-200 rounded-lg p-8 text-center hover:border-orange-500 hover:shadow-lg transition-all group"
             >
@@ -300,7 +300,7 @@ const Hostel = () => {
                 <span className="mr-2">Apply Now</span>
                 <ArrowRight size={16} />
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

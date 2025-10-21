@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,66 +8,82 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
+    { name: "Home", href: "/" },
     {
-      name: 'About Us',
-      href: '/about',
+      name: "About Us",
+      href: "/about",
       children: [
-        { name: "Chairman's Message", href: '/about/chairman-message' },
-        { name: "Principal's Message", href: '/about/principal-message' },
-        { name: 'Infrastructure', href: '/about/infrastructure' },
+        { name: "Chairman's Message", href: "/about/chairman-message" },
+        { name: "Principal's Message", href: "/about/principal-message" },
+        { name: "Infrastructure", href: "/about/infrastructure" },
       ],
     },
     {
-      name: 'Academics',
-      href: '/academics',
+      name: "Academics",
+      href: "/academics",
       children: [
-        { name: 'Students', href: '/academics/students' },
-        { name: 'School Rules', href: '/academics/school-rules' },
-        { name: 'Academic Calendar', href: '/academics/academic-calendar' },
+        { name: "Students", href: "/academics/students" },
+        { name: "School Rules", href: "/academics/school-rules" },
+        { name: "Academic Calendar", href: "/academics/academic-calendar" },
       ],
     },
-    { name: 'Administration', href: '/administration' },
+    { name: "Administration", href: "/administration" },
     {
-      name: 'Hostel',
-      href: '/hostel',
+      name: "Hostel",
+      href: "/hostel",
       children: [
-        { name: 'Hostel Rules', href: '/hostel/rules' },
-        { name: 'Admission', href: '/hostel/admission' },
+        { name: "Hostel Rules", href: "/hostel/rules" },
+        // { name: 'Admission', href: '/hostel/admission' },
       ],
     },
-    { name: 'Results', href: '/results' },
+    { name: "Results", href: "/results" },
     {
-      name: 'Activities',
-      href: '/activities',
+      name: "Activities",
+      href: "/activities",
       children: [
-        { name: 'Physical Activities', href: '/activities/physical' },
+        { name: "Physical Activities", href: "/activities/physical" },
         // { name: 'Creative Activities', href: '/activities/creative' },
       ],
     },
-    { name: 'MPD', href: '/mpd' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: "MPD", href: "/mpd" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
     <header className="bg-white shadow-lg">
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between items-center text-sm">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1">
-                <Phone size={14} />
-                <span>+91 9431376581 , +91 7631130006</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Mail size={14} />
-                <span>info@budsgardenschool.edu.in</span>
-              </div>
+      <div className="bg-blue-900 text-white py-1 text-[11px]">
+        <div className="container mx-auto px-2">
+          <div className="flex flex-nowrap items-center justify-between whitespace-nowrap overflow-hidden text-ellipsis">
+            <div className="flex items-center space-x-2">
+              <Phone size={12} className="inline-block" />
+              <span>+91 9431376581 , +91 7631130006</span>
             </div>
-            <div className="flex items-center space-x-1">
-              <MapPin size={14} />
+
+            <div className="flex items-center space-x-2">
+              <Mail size={12} className="inline-block" />
+              <span>budsgarden.rajganj@gmail.com</span>
+            </div>
+
+            <div className="flex items-center space-x-1 text-blue-100">
+              <span>
+                Owned and Run By:{" "}
+                <span className="font-medium text-white">
+                  Buds Garden Education Society, Rajganj, Dhanbad
+                </span>{" "}
+                | Affiliated To{" "}
+                <span className="font-medium text-white">
+                  C.B.S.E., New Delhi
+                </span>{" "}
+                | Affiliation No.{" "}
+                <span className="font-medium text-white">3430311</span> | School
+                Code –<span className="font-medium text-white"> 66510</span>
+              </span>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <MapPin size={12} className="inline-block" />
               <span>Buds Garden School, Daludih, India</span>
             </div>
           </div>
@@ -80,11 +96,19 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-white-600 rounded-full flex items-center justify-center">
               {/* <span className="text-white font-bold text-xl">ES</span> */}
-              <img src="/logo.png" alt="ES Logo" className="h-10 w-auto inline-block" />
+              <img
+                src="/logo.png"
+                alt="ES Logo"
+                className="h-10 w-auto inline-block"
+              />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-blue-900">Buds Garden School</h1>
-              <p className="text-sm text-gray-600">Nurturing Excellence, Building Future</p>
+              <h1 className="text-2xl font-bold text-blue-900">
+                Buds Garden School
+              </h1>
+              <p className="text-sm text-gray-600">
+                Nurturing Excellence, Building Future
+              </p>
             </div>
           </Link>
 
@@ -94,15 +118,18 @@ const Header = () => {
               <div
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.name)}
+                onMouseEnter={() =>
+                  item.children && setActiveDropdown(item.name)
+                }
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
                   to={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 transition-colors ${
-                    location.pathname === item.href || location.pathname.startsWith(item.href + '/')
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-700 hover:bg-blue-50'
+                    location.pathname === item.href ||
+                    location.pathname.startsWith(item.href + "/")
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-700 hover:bg-blue-50"
                   }`}
                 >
                   <span>{item.name}</span>
@@ -145,8 +172,8 @@ const Header = () => {
                     to={item.href}
                     className={`block px-4 py-2 rounded-lg text-sm font-medium ${
                       location.pathname === item.href
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 hover:bg-blue-50'
+                        ? "bg-blue-600 text-white"
+                        : "text-gray-700 hover:bg-blue-50"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >

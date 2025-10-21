@@ -74,7 +74,7 @@ const Activities = () => {
       description: 'Sports, games, and physical fitness programs to develop strength, coordination, and teamwork.',
       link: '/activities/physical',
       color: 'bg-blue-600',
-      activities: ['Basketball', 'Cricket', 'Football', 'Athletics', 'Swimming', 'Badminton'],
+      activities: ['Basketball', 'Cricket', 'Football', 'Athletics', 'Badminton'],
     },
     // {
     //   icon: Palette,
@@ -155,7 +155,7 @@ const Activities = () => {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
@@ -185,7 +185,7 @@ const Activities = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Recent Achievements */}
       <section className="py-16 bg-white">

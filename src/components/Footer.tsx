@@ -150,7 +150,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Mail size={18} />
                 <span className="text-blue-100">
-                  info@budsgardenschool.edu.in
+                  budsgarden.rajganj@gmail.com 
                 </span>
               </div>
             </div>

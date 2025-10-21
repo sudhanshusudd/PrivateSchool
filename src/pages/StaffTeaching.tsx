@@ -33,8 +33,7 @@ const StaffTeaching = () => {
       <section
         className="relative bg-cover bg-center py-24 text-white"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1600&q=80')",
+          backgroundImage: "url('/cultural/cultural5.jpeg')",
         }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
@@ -42,9 +41,9 @@ const StaffTeaching = () => {
           <h1 className="text-5xl font-bold mb-2 tracking-wide uppercase">
             Staff (Teaching)
           </h1>
-          <p className="text-gray-200 text-lg">
+          {/* <p className="text-gray-200 text-lg">
             Home <span className="text-blue-300">// Staff (Teaching)</span>
-          </p>
+          </p> */}
         </div>
       </section>
 

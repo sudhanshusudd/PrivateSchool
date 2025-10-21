@@ -1,63 +1,46 @@
 import React, { useState } from 'react';
-import { Trophy, Download, Calendar, TrendingUp, Award, Users, Search, Filter } from 'lucide-react';
+import { Trophy, Calendar, TrendingUp, Award, Users, Download } from 'lucide-react';
 
 const Results = () => {
-  const [selectedYear, setSelectedYear] = useState('2024');
-  const [selectedClass, setSelectedClass] = useState('all');
-
-  const years = ['2024', '2023', '2022', '2021', '2020'];
-  const classes = [
-    { value: 'all', label: 'All Classes' },
-    { value: 'X', label: 'Class X' },
-    { value: 'XII', label: 'Class XII' },
-  ];
+  const [selectedYear] = useState('2025');
+  const [selectedClass] = useState('all');
 
   const resultsData = {
-    '2024': {
+    '2025': {
       'X': {
         passRate: '100%',
-        firstDivision: '95%',
-        schoolToppers: 8,
-        subjectToppers: 25,
+        firstDivision: '96%',
+        schoolToppers: 10,
+        subjectToppers: 28,
         results: [
-          { name: 'Aarav Sharma', percentage: '98.6%', rank: '1st', subjects: 'Mathematics, Science, English' },
-          { name: 'Priya Patel', percentage: '97.8%', rank: '2nd', subjects: 'Science, Mathematics, Hindi' },
-          { name: 'Rohit Kumar', percentage: '96.2%', rank: '3rd', subjects: 'Mathematics, Social Science' },
+          { name: 'Sonali Kumari', percentage: '94.8%' },
+          { name: 'Suraj Kumar Mahato', percentage: '94.6%' },
+          { name: 'Aarifa Parween', percentage: '93.6%' },
+          { name: 'Nawnneet Kumar Tiwary', percentage: '91.8%' },
+          { name: 'Khushi Kumari', percentage: '91.2%' },
+          { name: 'Joshina Kumari Chourasia', percentage: '91.0%' },
+          { name: 'Shubham Kumar Dey', percentage: '90.8%' },
+          { name: 'Sonal Kumari', percentage: '90.6%' },
+          { name: 'Rupa Kumari', percentage: '88.2%' },
+          { name: 'Archi Priya', percentage: '88.0%' },
         ],
       },
       'XII': {
         passRate: '100%',
-        firstDivision: '92%',
-        schoolToppers: 5,
-        subjectToppers: 18,
+        firstDivision: '94%',
+        schoolToppers: 10,
+        subjectToppers: 20,
         results: [
-          { name: 'Ananya Singh', percentage: '99.2%', rank: '1st', subjects: 'Physics, Chemistry, Mathematics' },
-          { name: 'Karan Gupta', percentage: '98.4%', rank: '2nd', subjects: 'Physics, Mathematics, Chemistry' },
-          { name: 'Sneha Joshi', percentage: '97.6%', rank: '3rd', subjects: 'Biology, Chemistry, Physics' },
-        ],
-      },
-    },
-    '2023': {
-      'X': {
-        passRate: '100%',
-        firstDivision: '93%',
-        schoolToppers: 6,
-        subjectToppers: 22,
-        results: [
-          { name: 'Arjun Reddy', percentage: '97.4%', rank: '1st', subjects: 'Mathematics, Science, English' },
-          { name: 'Kavya Nair', percentage: '96.8%', rank: '2nd', subjects: 'Science, Mathematics, Social Science' },
-          { name: 'Vikash Singh', percentage: '95.6%', rank: '3rd', subjects: 'Mathematics, Hindi, Science' },
-        ],
-      },
-      'XII': {
-        passRate: '100%',
-        firstDivision: '90%',
-        schoolToppers: 4,
-        subjectToppers: 16,
-        results: [
-          { name: 'Riya Agarwal', percentage: '98.8%', rank: '1st', subjects: 'Chemistry, Physics, Mathematics' },
-          { name: 'Aditya Sharma', percentage: '97.2%', rank: '2nd', subjects: 'Physics, Mathematics, Chemistry' },
-          { name: 'Pooja Kumari', percentage: '96.4%', rank: '3rd', subjects: 'Biology, Chemistry, Physics' },
+          { name: 'Sudhanshu Ranjan Rai', percentage: '93.4%' },
+          { name: 'Akshay Sharma', percentage: '92.2%' },
+          { name: 'Anurag Kumar', percentage: '91.8%' },
+          { name: 'Anushka', percentage: '91.4%' },
+          { name: 'Sarthak Dey', percentage: '91.2%' },
+          { name: 'Sanskriti', percentage: '90.2%' },
+          { name: 'Saquib Meraj', percentage: '90.2%' },
+          { name: 'Rajveer Bhagat', percentage: '88.6%' },
+          { name: 'Rahul Kumar Saw', percentage: '88.6%' },
+          { name: 'Arnav Mittal', percentage: '88.2%' },
         ],
       },
     },
@@ -65,25 +48,25 @@ const Results = () => {
 
   const achievements = [
     {
-      year: '2024',
+      year: '2025',
       title: 'Outstanding Academic Performance',
-      description: 'School achieves 100% pass rate for the 5th consecutive year',
+      description: 'School achieves 100% pass rate for the 6th consecutive year',
       icon: Trophy,
     },
     {
-      year: '2024',
+      year: '2025',
       title: 'State-Level Recognition',
-      description: '15 students among state toppers in various subjects',
+      description: '20 students among state toppers in various subjects',
       icon: Award,
     },
     {
-      year: '2023',
+      year: '2025',
       title: 'Excellence in Sciences',
       description: 'Highest number of students cleared JEE and NEET entrance exams',
       icon: TrendingUp,
     },
     {
-      year: '2023',
+      year: '2025',
       title: 'Best Performing School',
       description: 'Awarded by CBSE for consistent academic excellence',
       icon: Trophy,
@@ -127,69 +110,19 @@ const Results = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-              <div className="text-gray-600">Pass Rate (2024)</div>
+              <div className="text-gray-600">Pass Rate (2025)</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">94%</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
               <div className="text-gray-600">First Division</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">43</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">48</div>
               <div className="text-gray-600">Subject Toppers</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">5</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">6</div>
               <div className="text-gray-600">Years of 100% Pass Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Filter Section */}
-      <section className="py-8 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between items-center">
-            <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Calendar size={20} className="text-gray-600" />
-                <select
-                  value={selectedYear}
-                  onChange={(e) => setSelectedYear(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                >
-                  {years.map((year) => (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <Filter size={20} className="text-gray-600" />
-                <select
-                  value={selectedClass}
-                  onChange={(e) => setSelectedClass(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                >
-                  {classes.map((cls) => (
-                    <option key={cls.value} value={cls.value}>
-                      {cls.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="flex space-x-4">
-              <button className="flex items-center px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                <Download size={16} className="mr-2" />
-                Download Results
-              </button>
-              <button className="flex items-center px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                <Search size={16} className="mr-2" />
-                Search Student
-              </button>
             </div>
           </div>
         </div>
@@ -205,8 +138,10 @@ const Results = () => {
                 <>
                   {/* Class X Results */}
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Class X Results - {selectedYear}</h2>
-                    
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                      Class X Results - 2025
+                    </h2>
+
                     {/* Class X Stats */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                       <div className="bg-blue-50 p-6 rounded-lg text-center">
@@ -235,14 +170,8 @@ const Results = () => {
                           <div key={index} className="bg-gray-50 p-6 rounded-lg">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="text-lg font-semibold text-gray-900">{student.name}</h4>
-                              <div className="flex items-center space-x-4">
-                                <span className="text-2xl font-bold text-purple-600">{student.percentage}</span>
-                                <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
-                                  {student.rank}
-                                </span>
-                              </div>
+                              <span className="text-2xl font-bold text-purple-600">{student.percentage}</span>
                             </div>
-                            <p className="text-gray-600">Subject Excellence: {student.subjects}</p>
                           </div>
                         ))}
                       </div>
@@ -251,8 +180,10 @@ const Results = () => {
 
                   {/* Class XII Results */}
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Class XII Results - {selectedYear}</h2>
-                    
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                      Class XII Results - 2025
+                    </h2>
+
                     {/* Class XII Stats */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                       <div className="bg-blue-50 p-6 rounded-lg text-center">
@@ -281,73 +212,19 @@ const Results = () => {
                           <div key={index} className="bg-gray-50 p-6 rounded-lg">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="text-lg font-semibold text-gray-900">{student.name}</h4>
-                              <div className="flex items-center space-x-4">
-                                <span className="text-2xl font-bold text-purple-600">{student.percentage}</span>
-                                <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
-                                  {student.rank}
-                                </span>
-                              </div>
+                              <span className="text-2xl font-bold text-purple-600">{student.percentage}</span>
                             </div>
-                            <p className="text-gray-600">Subject Excellence: {student.subjects}</p>
                           </div>
                         ))}
                       </div>
                     </div>
                   </div>
                 </>
-              ) : (
-                /* Single Class Results */
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                    Class {selectedClass} Results - {selectedYear}
-                  </h2>
-                  
-                  {/* Stats */}
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                    <div className="bg-blue-50 p-6 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{currentResults.passRate}</div>
-                      <div className="text-gray-600">Pass Rate</div>
-                    </div>
-                    <div className="bg-green-50 p-6 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-2">{currentResults.firstDivision}</div>
-                      <div className="text-gray-600">First Division</div>
-                    </div>
-                    <div className="bg-purple-50 p-6 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-purple-600 mb-2">{currentResults.schoolToppers}</div>
-                      <div className="text-gray-600">School Toppers</div>
-                    </div>
-                    <div className="bg-orange-50 p-6 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-orange-600 mb-2">{currentResults.subjectToppers}</div>
-                      <div className="text-gray-600">Subject Toppers</div>
-                    </div>
-                  </div>
-
-                  {/* Top Performers */}
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Top Performers</h3>
-                    <div className="space-y-4">
-                      {currentResults.results.map((student, index) => (
-                        <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="text-lg font-semibold text-gray-900">{student.name}</h4>
-                            <div className="flex items-center space-x-4">
-                              <span className="text-2xl font-bold text-purple-600">{student.percentage}</span>
-                              <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
-                                {student.rank}
-                              </span>
-                            </div>
-                          </div>
-                          <p className="text-gray-600">Subject Excellence: {student.subjects}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
+              ) : null}
             </div>
           ) : (
             <div className="text-center py-12">
-              <div className="text-gray-500 text-lg">No results available for the selected criteria.</div>
+              <div className="text-gray-500 text-lg">No results available.</div>
             </div>
           )}
         </div>
@@ -394,7 +271,7 @@ const Results = () => {
           <p className="text-xl text-purple-100 mb-8">
             Join Buds Garden and be part of our legacy of academic achievement
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
               <Users size={20} className="mr-2" />

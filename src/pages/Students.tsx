@@ -28,7 +28,7 @@ const Students = () => {
       achievements: [
         "State Champions in Basketball (2023)",
         "Regional Winners in Cricket Tournament",
-        "Multiple medals in Swimming Championships",
+        // "Multiple medals in Swimming Championships",
         "50+ students selected for district sports teams",
       ],
     },
