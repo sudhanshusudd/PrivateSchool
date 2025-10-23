@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {
   Camera,
   Play,
-  Calendar,
   Users,
   Award,
   BookOpen,
@@ -10,50 +9,8 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react';
+import { categories, galleryItems, imageFiles } from '../data/galleryData';
 
-const imageFiles = {
-  Academic: [
-    'Academic1.jpg',
-    'science exhibition1.jpg',
-    'science exhibition2.jpg',
-    'science exhibition3.jpg',
-    'science exhibition4.jpg',
-  ],
-  cultural: [
-    'cultural1.jpg',
-    'cultural2.jpg',
-    'cultural3.jpg',
-    'cultural4.jpeg',
-    'cultural5.jpeg',
-    'cultural6.jpeg',
-    'cultural7.jpg',
-    'cultural8.jpg',
-  ],
-  infrastructure: [
-    'infra1.jpg',
-    'infra2.jpg',
-    'infra3.jpg',
-    'infra4.png',
-    'infra5.png',
-    'infra6.jpg',
-    'Lab1.png',
-  ],
-  sports: [
-    'ncc1.jpg',
-    'ncc2.jpg',
-    'ncc3.jpg',
-    'sports1.jpeg',
-    'sports2.jpeg',
-    'sports3.jpeg',
-    'sports4.jpeg',
-    'sports5.jpeg',
-    'sports6.jpg',
-    'sports7.jpg',
-    'sports8.jpg',
-    'sports9.jpg',
-    'sports10.jpg',
-  ],
-};
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -63,60 +20,6 @@ const Gallery = () => {
   const [modalCategory, setModalCategory] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const categories = [
-    { value: 'all', label: 'All Categories', icon: Camera },
-    { value: 'Academic', label: 'Academic Events', icon: BookOpen },
-    { value: 'sports', label: 'Sports & Athletics', icon: Award },
-    { value: 'cultural', label: 'Cultural Activities', icon: Users },
-    { value: 'infrastructure', label: 'Campus & Infrastructure', icon: Camera },
-  ];
-
-  const galleryItems = [
-    {
-      id: 1,
-      type: 'image',
-      category: 'Academic',
-      year: '2024',
-      title: 'Science Exhibition 2024',
-      description: 'Students showcasing innovative science projects',
-      thumbnail:
-        'https://images.pexels.com/photos/8471888/pexels-photo-8471888.jpeg?auto=compress&cs=tinysrgb&w=400',
-      date: 'March 15, 2024',
-    },
-    {
-      id: 2,
-      type: 'image',
-      category: 'sports',
-      year: '2024',
-      title: 'Basketball Championship',
-      description: 'Inter-house basketball tournament finals',
-      thumbnail:
-        'https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg?auto=compress&cs=tinysrgb&w=400',
-      date: 'February 20, 2024',
-    },
-    {
-      id: 3,
-      type: 'video',
-      category: 'cultural',
-      year: '2024',
-      title: 'Annual Day Celebration',
-      description: 'Highlights from our grand annual day event',
-      thumbnail:
-        'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400',
-      date: 'January 25, 2024',
-    },
-    {
-      id: 4,
-      type: 'image',
-      category: 'infrastructure',
-      year: '2024',
-      title: 'New Library Wing',
-      description: 'Our newly renovated library with modern facilities',
-      thumbnail:
-        'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400',
-      date: 'January 10, 2024',
-    },
-  ];
 
   const filteredItems = galleryItems.filter((item) => {
     const categoryMatch =
@@ -129,7 +32,7 @@ const Gallery = () => {
     if (imageFiles[category]) {
       setModalImages(imageFiles[category]);
       setModalCategory(category);
-      setSelectedIndex(0);
+      setSelectedIndex(null);
       setOpenModal(true);
     }
   };
@@ -207,11 +110,10 @@ const Gallery = () => {
                 <button
                   key={category.value}
                   onClick={() => setSelectedCategory(category.value)}
-                  className={`flex items-center px-6 py-3 rounded-lg font-medium transition-colors ${
-                    selectedCategory === category.value
-                      ? 'bg-teal-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                  className={`flex items-center px-6 py-3 rounded-lg font-medium transition-colors ${selectedCategory === category.value
+                    ? 'bg-teal-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                 >
                   <Icon size={18} className="mr-2" />
                   {category.label}
@@ -223,8 +125,8 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gray-50 ">
+        <div className="container mx-auto px-4 ">
           {filteredItems.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredItems.map((item) => (
@@ -235,7 +137,9 @@ const Gallery = () => {
                 >
                   <div className="relative">
                     <img
-                      src={item.thumbnail}
+                      src={`/${(item.category as keyof typeof imageFiles) === 'infrastructure' ? 'infra' : item.category}/${imageFiles[item.category as keyof typeof imageFiles][Math.floor(Math.random() * imageFiles[item.category as keyof typeof imageFiles].length)]
+                        }`}
+
                       alt={item.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -247,18 +151,19 @@ const Gallery = () => {
                       </div>
                     )}
                   </div>
+
                   <div className="p-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm mb-3">{item.description}</p>
-                    <div className="flex items-center justify-between text-xs text-gray-500">
+                    {/* <div className="flex items-center justify-between text-xs text-gray-500">
                       <div className="flex items-center">
                         <Calendar size={12} className="mr-1" />
                         <span>{item.date}</span>
                       </div>
                       <span className="capitalize">{item.type}</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}
@@ -295,24 +200,34 @@ const Gallery = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {modalImages.map((img, idx) => (
-                <img
+                <div
                   key={idx}
-                  src={`/${modalCategory === 'infrastructure' ? 'infra' : modalCategory}/${img}`}
-                  alt={img}
-                  className="rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+                  className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-md cursor-pointer border border-gray-200"
                   onClick={() => handleImageClick(idx)}
-                  onError={(e) =>
+                >
+                  <img
+                    src={`/${modalCategory === "infrastructure" ? "infra" : modalCategory}/${img}`}
+                    alt={img}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) =>
                     (e.currentTarget.src =
-                      'https://via.placeholder.com/400x300?text=Image+Missing')
-                  }
-                />
+                      "https://via.placeholder.com/400x300?text=Image+Missing")
+                    }
+                  />
+                </div>
               ))}
             </div>
+
 
             {selectedIndex !== null && (
               <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
                 <button
-                  onClick={() => setSelectedIndex(null)}
+                  onClick={() => {
+                    if (selectedIndex !== null) {
+                      setOpenModal(false);
+                      setSelectedIndex(null);
+                    }
+                  }}
                   className="absolute top-5 right-5 text-white hover:text-red-400"
                 >
                   <X size={32} />
@@ -352,10 +267,10 @@ const Gallery = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-6">
+            <div onClick={() => handleCardClick('Academic')} className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-6 cursor-pointer">
               <div className="flex items-center justify-between mb-4">
                 <BookOpen size={32} />
-                <span className="text-blue-200 text-sm">25 Photos</span>
+                <span className="text-blue-200 text-sm">{imageFiles['Academic']?.length || 0} Photos</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Academic Excellence Awards 2024</h3>
               <p className="text-blue-100 text-sm">
@@ -363,10 +278,10 @@ const Gallery = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-lg p-6">
+            <div onClick={() => handleCardClick('sports')} className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-lg p-6 cursor-pointer">
               <div className="flex items-center justify-between mb-4">
                 <Award size={32} />
-                <span className="text-green-200 text-sm">40 Photos</span>
+                <span className="text-green-200 text-sm">{imageFiles['sports']?.length || 0} Photos</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Sports Championship 2024</h3>
               <p className="text-green-100 text-sm">
@@ -374,10 +289,10 @@ const Gallery = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-lg p-6">
+            <div onClick={() => handleCardClick('cultural')} className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-lg p-6 cursor-pointer">
               <div className="flex items-center justify-between mb-4">
                 <Users size={32} />
-                <span className="text-purple-200 text-sm">60 Photos</span>
+                <span className="text-purple-200 text-sm">{imageFiles['cultural']?.length || 0} Photos</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Cultural Festival 2024</h3>
               <p className="text-purple-100 text-sm">
@@ -392,11 +307,11 @@ const Gallery = () => {
       <section className="py-16 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Share Your Memories</h2>
-          <p className="text-xl text-teal-100 mb-8">
+          {/* <p className="text-xl text-teal-100 mb-8">
             Have photos or videos from school events? We'd love to feature them in our gallery!
-          </p>
+          </p> */}
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          {/* <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="inline-flex items-center px-8 py-4 bg-white text-teal-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
               <Camera size={20} className="mr-2" />
               Submit Photos
@@ -405,7 +320,21 @@ const Gallery = () => {
               <Play size={20} className="mr-2" />
               Submit Videos
             </button>
+          </div> */}
+          <div className="text-center mb-6">
+            <p className="text-xl text-teal-100 mb-4">
+              Have photos or videos from school events? Share them with us at{' '}
+              <a
+                href="mailto:budsgarden.rajganj@gmail.com"
+                className="underline font-semibold hover:text-white"
+              >
+                budsgarden.rajganj@gmail.com
+              </a>{' '}
+              to be featured in our gallery!
+            </p>
+
           </div>
+
         </div>
       </section>
     </div>
