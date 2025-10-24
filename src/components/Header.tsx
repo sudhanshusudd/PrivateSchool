@@ -62,9 +62,24 @@ const Header = () => {
             <Mail size={12} />
             <span>budsgarden.rajganj@gmail.com</span>
           </div>
+          <div className="flex items-center space-x-1 text-blue-100">
+            <span>
+              Owned and Run By:{" "}
+              <span className="font-medium text-white">
+                Buds Garden Education Society, Rajganj, Dhanbad
+              </span>{" "}
+              | Affiliated To{" "}
+              <span className="font-medium text-white">
+                C.B.S.E., New Delhi
+              </span>{" "}
+              | Affiliation No.{" "}
+              <span className="font-medium text-white">3430311</span> | School
+              Code –<span className="font-medium text-white"> 66510</span>
+            </span>
+          </div>
           <div className="flex items-center space-x-2">
             <MapPin size={12} />
-            <span>Buds Garden School, Daludih</span>
+            <span>Buds Garden School, Daludih, India</span>
           </div>
         </div>
       </div>

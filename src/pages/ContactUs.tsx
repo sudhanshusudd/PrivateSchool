@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
+import { departments } from '../data/contactData';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -61,50 +62,50 @@ const ContactUs = () => {
     },
   ];
 
-  const departments = [
-    {
-      name: 'Admissions Office',
-      phone: '+91 123-456-7891',
-      email: 'admissions@budsgardenschool.edu.in',
-      head: 'Mrs. Sunita Sharma',
-      description: 'New student admissions and enrollment queries',
-    },
-    {
-      name: 'Academic Office',
-      phone: '+91 123-456-7892',
-      email: 'academic@budsgardenschool.edu.in',
-      head: 'Dr. Rajesh Patel',
-      description: 'Academic programs, curriculum, and student progress',
-    },
-    {
-      name: 'Administration',
-      phone: '+91 123-456-7893',
-      email: 'admin@budsgardenschool.edu.in',
-      head: 'Mr. Unknown',
-      description: 'General administration and operational matters',
-    },
-    {
-      name: 'Finance Department',
-      phone: '+91 123-456-7894',
-      email: 'accounts@budsgardenschool.edu.in',
-      head: 'Mrs. Priya Gupta',
-      description: 'Fee payments, financial assistance, and billing',
-    },
-    {
-      name: 'Hostel Office',
-      phone: '+91 123-456-7895',
-      email: 'hostel@budsgardenschool.edu.in',
-      head: 'Mr. Suresh Kumar',
-      description: 'Hostel accommodation and residential services',
-    },
-    {
-      name: 'Transport Department',
-      phone: '+91 123-456-7896',
-      email: 'transport@budsgardenschool.edu.in',
-      head: 'Mr. Vijay Singh',
-      description: 'School bus services and transportation',
-    },
-  ];
+  // const departments = [
+  //   {
+  //     name: 'Admissions Office',
+  //     phone: '+91 123-456-7891',
+  //     email: 'admissions@budsgardenschool.edu.in',
+  //     head: 'Mrs. Sunita Sharma',
+  //     description: 'New student admissions and enrollment queries',
+  //   },
+  //   {
+  //     name: 'Academic Office',
+  //     phone: '+91 123-456-7892',
+  //     email: 'academic@budsgardenschool.edu.in',
+  //     head: 'Dr. Rajesh Patel',
+  //     description: 'Academic programs, curriculum, and student progress',
+  //   },
+  //   {
+  //     name: 'Administration',
+  //     phone: '+91 123-456-7893',
+  //     email: 'admin@budsgardenschool.edu.in',
+  //     head: 'Mr. Unknown',
+  //     description: 'General administration and operational matters',
+  //   },
+  //   {
+  //     name: 'Finance Department',
+  //     phone: '+91 123-456-7894',
+  //     email: 'accounts@budsgardenschool.edu.in',
+  //     head: 'Mrs. Priya Gupta',
+  //     description: 'Fee payments, financial assistance, and billing',
+  //   },
+  //   {
+  //     name: 'Hostel Office',
+  //     phone: '+91 123-456-7895',
+  //     email: 'hostel@budsgardenschool.edu.in',
+  //     head: 'Mr. Suresh Kumar',
+  //     description: 'Hostel accommodation and residential services',
+  //   },
+  //   {
+  //     name: 'Transport Department',
+  //     phone: '+91 123-456-7896',
+  //     email: 'transport@budsgardenschool.edu.in',
+  //     head: 'Mr. Vijay Singh',
+  //     description: 'School bus services and transportation',
+  //   },
+  // ];
 
   const quickLinks = [
     { title: 'Admission Process', description: 'Learn about our admission requirements and procedures' },
@@ -141,12 +142,11 @@ const ContactUs = () => {
               const Icon = info.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
-                    info.color === 'text-blue-600' ? 'bg-blue-100' :
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${info.color === 'text-blue-600' ? 'bg-blue-100' :
                     info.color === 'text-green-600' ? 'bg-green-100' :
-                    info.color === 'text-purple-600' ? 'bg-purple-100' :
-                    'bg-orange-100'
-                  }`}>
+                      info.color === 'text-purple-600' ? 'bg-purple-100' :
+                        'bg-orange-100'
+                    }`}>
                     <Icon size={32} className={info.color} />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{info.title}</h3>
@@ -169,7 +169,7 @@ const ContactUs = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -297,27 +297,27 @@ const ContactUs = () => {
             <div className="space-y-8">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Visit Our Campus</h3>
-                
+
                 <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                            <iframe
-                                title="Buds Garden School Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.598967899632!2d86.32314597443215!3d23.87727558452045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6a66fb2ad609d%3A0x1aff44c667d16a61!2sBuds%20Garden%20School%2C%20Daludih%2C%20Rajganj!5e0!3m2!1sen!2sin!4v1728573745336!5m2!1sen!2sin"
-                                width="100%"
-                                height="400"
-                                style={{ border: 0 }}
-                                
-                            ></iframe>
-                            <div className="p-4 text-center">
-                                <a
-                                    href="https://maps.google.com/?q=E-V8GG+W7 Dalludih, Jharkhand"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-teal-600 hover:text-teal-800 font-medium"
-                                >
-                                    View Larger Map
-                                </a>
-                            </div>
-                        </div>
+                  <iframe
+                    title="Buds Garden School Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.598967899632!2d86.32314597443215!3d23.87727558452045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6a66fb2ad609d%3A0x1aff44c667d16a61!2sBuds%20Garden%20School%2C%20Daludih%2C%20Rajganj!5e0!3m2!1sen!2sin!4v1728573745336!5m2!1sen!2sin"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+
+                  ></iframe>
+                  <div className="p-4 text-center">
+                    <a
+                      href="https://maps.google.com/?q=E-V8GG+W7 Dalludih, Jharkhand"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-teal-600 hover:text-teal-800 font-medium"
+                    >
+                      View Larger Map
+                    </a>
+                  </div>
+                </div>
 
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -341,7 +341,7 @@ const ContactUs = () => {
               {/* Quick Links */}
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Information</h3>
-                
+
                 <div className="space-y-4">
                   {quickLinks.map((link, index) => (
                     <div key={index} className="border-l-4 border-blue-500 pl-4">
@@ -364,24 +364,49 @@ const ContactUs = () => {
             <p className="text-xl text-gray-600">Direct contact information for specific departments</p>
           </div>
 
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {departments.map((dept, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{dept.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{dept.description}</p>
-                
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center">
-                    <User size={14} className="text-blue-600 mr-2" />
-                    <span className="font-medium">{dept.head}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone size={14} className="text-green-600 mr-2" />
-                    <span>{dept.phone}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail size={14} className="text-purple-600 mr-2" />
-                    <span className="break-all">{dept.email}</span>
+              <div
+                key={index}
+                className="bg-gray-50 rounded-lg p-6 flex flex-col justify-between  hover:shadow-lg transition-shadow duration-200"
+              >
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {dept.name}
+                  </h3>
+                  {dept.description && (
+                    <p className="text-gray-600 text-sm mb-4">{dept.description}</p>
+                  )}
+
+                  <div className="space-y-2 text-sm">
+                    {dept.contacts && dept.contacts.length > 0 && (
+                      <div className="space-y-1">
+                        {dept.contacts.map((contact, i) => (
+                          <div key={i} className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-1 border-b border-gray-200 last:border-b-0">
+                            <div className="flex items-center text-gray-800">
+                              <User size={14} className="text-blue-600 mr-2 flex-shrink-0" />
+                              <span className="font-medium">{contact.head}</span>
+                            </div>
+
+                            {contact.phone && (
+                              <div className="flex items-center mt-1 sm:mt-0 sm:ml-4 text-gray-600">
+                                <Phone size={14} className="text-green-600 mr-2 flex-shrink-0" />
+                                <span className="text-right">{contact.phone}</span>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Email */}
+                    {/* {dept.email && (
+                      <div className="flex items-center pt-2 border-t border-gray-200 mt-2">
+                        <Mail size={14} className="text-purple-600 mr-2 flex-shrink-0" />
+                        <span className="break-all">{dept.email}</span>
+                      </div>
+                    )} */}
                   </div>
                 </div>
               </div>
@@ -431,14 +456,14 @@ const ContactUs = () => {
           <p className="text-xl text-gray-600 mb-8">
             For urgent matters or emergencies, please contact us immediately
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div className="bg-red-600 text-white p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Emergency Hotline</h3>
               <p className="text-2xl font-bold">+91 123-456-7890</p>
               <p className="text-red-200 text-sm">Available 24/7</p>
             </div>
-            
+
             <div className="bg-blue-600 text-white p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Principal's Office</h3>
               <p className="text-2xl font-bold">+91 123-456-7891</p>
