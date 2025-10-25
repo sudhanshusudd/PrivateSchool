@@ -6,7 +6,6 @@ const ResultAcademics = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ Dynamic Quick Links in camelCase
   const quickLinks = [
     { title: "General Information", path: "/mpd" },
     { title: "Document And Information", path: "/documentInformation" },
@@ -29,8 +28,8 @@ const ResultAcademics = () => {
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide uppercase">
-            Result and Academics
+          <h1 className="text-5xl font-bold mb-2 tracking-wide">
+            Result And Academics
           </h1>
         </div>
       </section>
@@ -51,8 +50,8 @@ const ResultAcademics = () => {
                     key={index}
                     onClick={() => navigate(link.path)}
                     className={`flex items-center justify-between px-4 py-3 text-sm font-medium rounded-md cursor-pointer border transition-all duration-200 ${isActive
-                        ? "bg-blue-600 text-white border-blue-700 shadow-sm"
-                        : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
+                      ? "bg-blue-900 text-white border-blue-900 shadow-sm"
+                      : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
                       }`}
                   >
                     <span>{link.title}</span>
@@ -68,18 +67,18 @@ const ResultAcademics = () => {
 
           {/* Result & Academics Section */}
           <div className="lg:col-span-3 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-            <h2 className="text-2xl font-bold text-gray-800 px-6 py-4 border-b bg-gray-50 uppercase">
-              result and academics
+            <h2 className="text-2xl font-bold text-gray-800 px-6 py-4 border-b bg-gray-50 ">
+              Result And Academics
             </h2>
 
             {/* Top Table */}
             <div className="overflow-x-auto">
               <table className="w-full border text-sm text-left">
                 <thead>
-                  <tr className="bg-blue-600 text-white uppercase text-sm">
+                  <tr className="bg-blue-900 text-white  text-sm">
                     <th className="px-4 py-3 border w-20 text-center">Sl. No.</th>
-                    <th className="px-4 py-3 border">documents and information</th>
-                    <th className="px-4 py-3 border w-48 text-center">upload documents</th>
+                    <th className="px-4 py-3 border">Documents And Information</th>
+                    <th className="px-4 py-3 border w-48 text-center">Upload Documents</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -91,7 +90,7 @@ const ResultAcademics = () => {
                     <td className="px-4 py-3 border text-center">
                       <button
                         onClick={openStudentDuePdf}
-                        className="bg-blue-600 text-white px-4 py-1.5 rounded border border-blue-700 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-900 text-sm font-semibold shadow-sm transition"
                       >
                         document
                       </button>
@@ -105,7 +104,7 @@ const ResultAcademics = () => {
                     <td className="px-4 py-3 border text-center">
                       <button
                         onClick={openStudentDuePdf}
-                        className="bg-blue-600 text-white px-4 py-1.5 rounded border border-blue-700 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-900 text-sm font-semibold shadow-sm transition"
                       >
                         data
                       </button>
@@ -116,17 +115,17 @@ const ResultAcademics = () => {
             </div>
 
             {/* Class-X Results */}
-            <h3 className="text-xl font-bold text-gray-900 px-6 pt-8 uppercase">
-              result class-x
+            <h3 className="text-xl font-bold text-gray-900 px-6 pt-8">
+              Result Class-X
             </h3>
             <div className="overflow-x-auto px-6 pb-6">
               <table className="w-full border text-sm text-left mt-2">
                 <thead>
-                  <tr className="bg-blue-600 text-white uppercase text-sm">
-                    <th className="px-4 py-3 border">year</th>
-                    <th className="px-4 py-3 border">no. of registered students</th>
-                    <th className="px-4 py-3 border">no. of students passed</th>
-                    <th className="px-4 py-3 border">pass percentage</th>
+                  <tr className="bg-blue-900 text-white  text-sm">
+                    <th className="px-4 py-3 border">Year</th>
+                    <th className="px-4 py-3 border">No. Of Registered Students</th>
+                    <th className="px-4 py-3 border">No. Of Students Passed</th>
+                    <th className="px-4 py-3 border">Pass Percentage</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -141,17 +140,17 @@ const ResultAcademics = () => {
             </div>
 
             {/* Class-XII Results */}
-            <h3 className="text-xl font-bold text-gray-900 px-6 pt-4 uppercase">
-              result class-xii
+            <h3 className="text-xl font-bold text-gray-900 px-6 pt-4">
+              Result Class-XII
             </h3>
             <div className="overflow-x-auto px-6 pb-8">
               <table className="w-full border text-sm text-left mt-2">
                 <thead>
-                  <tr className="bg-blue-600 text-white uppercase text-sm">
-                    <th className="px-4 py-3 border">year</th>
-                    <th className="px-4 py-3 border">no. of registered students</th>
-                    <th className="px-4 py-3 border">no. of students passed</th>
-                    <th className="px-4 py-3 border">pass percentage</th>
+                  <tr className="bg-blue-900 text-white text-sm">
+                    <th className="px-4 py-3 border">Year</th>
+                    <th className="px-4 py-3 border">No. Of Registered Students</th>
+                    <th className="px-4 py-3 border">No. Of Students Passed</th>
+                    <th className="px-4 py-3 border">Pass Percentage</th>
                   </tr>
                 </thead>
                 <tbody>

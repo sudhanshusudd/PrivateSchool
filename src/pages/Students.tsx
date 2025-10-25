@@ -1,5 +1,6 @@
 import React from "react";
 import { Users, Trophy, BookOpen, Award, TrendingUp } from "lucide-react";
+import Hero from "../components/Hero";
 
 const Students = () => {
   const studentStats = [
@@ -77,16 +78,14 @@ const Students = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Header Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Our Students</h1>
-          <p className="text-xl text-blue-100">
-            Nurturing the next generation of leaders, innovators, and global
-            citizens
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Users size={48} />}
+        title="Our Students"
+        subtitle="Nurturing the next generation of leaders, innovators, and global citizens"
+        gradientFrom="from-blue-600"
+        gradientTo="to-indigo-600"
+        textColor="text-blue-100"
+      />
 
       {/* Student Statistics */}
       <section className="py-16 bg-white">

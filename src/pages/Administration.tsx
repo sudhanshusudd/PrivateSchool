@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Mail, Phone, Award, BookOpen, Star } from 'lucide-react';
 import { seniorFaculty } from '../data/administration';
+import Hero from '../components/Hero';
 
 const Administration = () => {
   const leadership = [
@@ -78,17 +79,14 @@ const Administration = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <Users size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">Administration & Faculty</h1>
-          </div>
-          <p className="text-xl text-emerald-100">
-            Meet our dedicated leadership team and experienced faculty members
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Users size={48} />}
+        title="Administration & Faculty"
+        subtitle="Meet our dedicated leadership team and experienced faculty members"
+        gradientFrom="from-emerald-600"
+        gradientTo="to-teal-600"
+        textColor="text-emerald-100"
+      />
 
       {/* Faculty Statistics */}
       <section className="py-16 bg-white">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
 import { departments } from '../data/contactData';
+import Hero from '../components/Hero';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -20,20 +21,54 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      category: 'general',
-      message: '',
-    });
+
+    const { name, email, phone, subject, category, message } = formData;
+
+    // Build the email subject and body
+    const emailSubject = `General Inquiry: ${subject}`;
+    const emailBody = `
+
+
+👤 Name: ${name}
+📧 Email: ${email}
+📞 Phone: ${phone || 'Not provided'}
+📂 Category: ${category}
+📝 Subject: ${subject}
+
+Message:
+${message || 'No additional message.'}
+
+---------------------------------------
+📅 Submitted on: ${new Date().toLocaleString()}
+`;
+
+    const gmailUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1` +
+      `&to=budsgarden.rajganj@gmail.com` +
+      `&su=${encodeURIComponent(emailSubject)}` +
+      `&body=${encodeURIComponent(emailBody)}`;
+
+    try {
+      window.open(gmailUrl, '_blank');
+
+      alert('Your message has been prepared in Gmail. Please review and send it.');
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        category: 'general',
+        message: '',
+      });
+    } catch (error) {
+      console.error("Error opening Gmail:", error);
+      alert("Unable to open Gmail. Please send your inquiry manually.");
+    }
   };
+
 
   const contactInfo = [
     {
@@ -62,50 +97,6 @@ const ContactUs = () => {
     },
   ];
 
-  // const departments = [
-  //   {
-  //     name: 'Admissions Office',
-  //     phone: '+91 123-456-7891',
-  //     email: 'admissions@budsgardenschool.edu.in',
-  //     head: 'Mrs. Sunita Sharma',
-  //     description: 'New student admissions and enrollment queries',
-  //   },
-  //   {
-  //     name: 'Academic Office',
-  //     phone: '+91 123-456-7892',
-  //     email: 'academic@budsgardenschool.edu.in',
-  //     head: 'Dr. Rajesh Patel',
-  //     description: 'Academic programs, curriculum, and student progress',
-  //   },
-  //   {
-  //     name: 'Administration',
-  //     phone: '+91 123-456-7893',
-  //     email: 'admin@budsgardenschool.edu.in',
-  //     head: 'Mr. Unknown',
-  //     description: 'General administration and operational matters',
-  //   },
-  //   {
-  //     name: 'Finance Department',
-  //     phone: '+91 123-456-7894',
-  //     email: 'accounts@budsgardenschool.edu.in',
-  //     head: 'Mrs. Priya Gupta',
-  //     description: 'Fee payments, financial assistance, and billing',
-  //   },
-  //   {
-  //     name: 'Hostel Office',
-  //     phone: '+91 123-456-7895',
-  //     email: 'hostel@budsgardenschool.edu.in',
-  //     head: 'Mr. Suresh Kumar',
-  //     description: 'Hostel accommodation and residential services',
-  //   },
-  //   {
-  //     name: 'Transport Department',
-  //     phone: '+91 123-456-7896',
-  //     email: 'transport@budsgardenschool.edu.in',
-  //     head: 'Mr. Vijay Singh',
-  //     description: 'School bus services and transportation',
-  //   },
-  // ];
 
   const quickLinks = [
     { title: 'Admission Process', description: 'Learn about our admission requirements and procedures' },
@@ -116,18 +107,15 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Header Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <MessageSquare size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">Contact Us</h1>
-          </div>
-          <p className="text-xl text-blue-100">
-            Get in touch with us for admissions, inquiries, or any assistance you need
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<MessageSquare size={48} />}
+        title="Contact Us"
+        subtitle="Get in touch with us for admissions, inquiries, or any assistance you need"
+        gradientFrom="from-blue-600"
+        gradientTo="to-purple-600"
+        textColor="text-blue-100"
+      />
+
 
       {/* Contact Information */}
       <section className="py-16 bg-white">
@@ -166,7 +154,6 @@ const ContactUs = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
 
@@ -339,22 +326,28 @@ const ContactUs = () => {
               </div>
 
               {/* Quick Links */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Information</h3>
 
-                <div className="space-y-4">
-                  {quickLinks.map((link, index) => (
-                    <div key={index} className="border-l-4 border-blue-500 pl-4">
-                      <h4 className="font-semibold text-gray-900">{link.title}</h4>
-                      <p className="text-gray-600 text-sm">{link.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
       </section>
+      <div className="container mx-auto bg-white p-10">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Information</h3>
+
+        {/* Responsive container */}
+        <div className="space-y-4 lg:space-y-0 lg:flex lg:space-x-6 flex-1">
+          {quickLinks.map((link, index) => (
+            <div
+              key={index}
+              className="border-l-4 border-blue-500 pl-4 flex-1"
+            >
+              <h4 className="font-semibold text-gray-900">{link.title}</h4>
+              <p className="text-gray-600 text-sm">{link.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Department Contacts */}
       <section className="py-16 bg-white">

@@ -6,7 +6,6 @@ const MPD = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ Dynamic Quick Links in camelCase
   const quickLinks = [
     { title: "General Information", path: "/mpd" },
     { title: "Document And Information", path: "/documentInformation" },
@@ -37,7 +36,7 @@ const MPD = () => {
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide uppercase">
+          <h1 className="text-5xl font-bold mb-2 tracking-wide">
             General Information
           </h1>
         </div>
@@ -59,7 +58,7 @@ const MPD = () => {
                     key={index}
                     onClick={() => navigate(link.path)}
                     className={`flex items-center justify-between px-4 py-3 text-sm font-medium rounded-md cursor-pointer border transition-all duration-200 ${isActive
-                      ? "bg-blue-600 text-white border-blue-700 shadow-sm"
+                      ? "bg-blue-900 text-white border-blue-900 shadow-sm"
                       : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
                       }`}
                   >

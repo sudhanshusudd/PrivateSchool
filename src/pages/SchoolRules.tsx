@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, Clock, Shield, Users, BookOpen, AlertCircle } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const SchoolRules = () => {
   const ruleCategories = [
@@ -86,17 +87,14 @@ const SchoolRules = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <FileText size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">School Rules & Code of Conduct</h1>
-          </div>
-          <p className="text-xl text-red-100">
-            Guidelines for maintaining a safe, respectful, and conducive learning environment
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<FileText size={48} />}
+        title="School Rules & Code of Conduct"
+        subtitle="Guidelines for maintaining a safe, respectful, and conducive learning environment"
+        gradientFrom="from-red-600"
+        gradientTo="to-pink-600"
+        textColor="text-red-100"
+      />
 
       {/* Introduction */}
       <section className="py-16 bg-white">
@@ -104,9 +102,9 @@ const SchoolRules = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Commitment to Excellence</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Buds Garden School is committed to providing a safe, inclusive, and supportive environment 
-              where all students can learn and grow. These rules and guidelines are designed to ensure 
-              mutual respect, academic integrity, and personal responsibility among all members of our 
+              Buds Garden School is committed to providing a safe, inclusive, and supportive environment
+              where all students can learn and grow. These rules and guidelines are designed to ensure
+              mutual respect, academic integrity, and personal responsibility among all members of our
               school community.
             </p>
           </div>
@@ -153,14 +151,14 @@ const SchoolRules = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">General School Rules</h2>
-            
+
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
               <div className="flex items-center mb-2">
                 <AlertCircle size={24} className="text-yellow-600 mr-2" />
                 <h3 className="text-lg font-semibold text-yellow-800">Important Notice</h3>
               </div>
               <p className="text-yellow-700">
-                All students and parents are expected to read and understand these rules thoroughly. 
+                All students and parents are expected to read and understand these rules thoroughly.
                 Adherence to these guidelines is essential for maintaining the school's standards of excellence.
               </p>
             </div>
@@ -216,7 +214,7 @@ const SchoolRules = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Parent Responsibilities</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-blue-900 mb-4">Communication</h3>
@@ -247,10 +245,10 @@ const SchoolRules = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Questions About School Rules?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            If you have any questions or need clarification about our school rules and policies, 
+            If you have any questions or need clarification about our school rules and policies,
             please don't hesitate to contact us.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div className="bg-gray-800 p-4 rounded-lg">
               <h3 className="font-semibold mb-2">Academic Office</h3>

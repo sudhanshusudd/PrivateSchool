@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Trophy, Calendar, TrendingUp, Award, Users, Download } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const Results = () => {
   const [selectedYear] = useState('2025');
@@ -92,17 +93,14 @@ const Results = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <Trophy size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">CBSE Results</h1>
-          </div>
-          <p className="text-xl text-purple-100">
-            Celebrating academic excellence and outstanding achievements of our students
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Trophy size={48} />}
+        title="CBSE Results"
+        subtitle="Celebrating academic excellence and outstanding achievements of our students"
+        gradientFrom="from-purple-600"
+        gradientTo="to-pink-600"
+        textColor="text-purple-100"
+      />
 
       {/* Quick Stats */}
       <section className="py-12 bg-white">

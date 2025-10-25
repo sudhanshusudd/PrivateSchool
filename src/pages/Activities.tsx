@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Trophy, Palette, ArrowRight, Calendar, Users } from 'lucide-react';
+import { Trophy, Palette, ArrowRight, Calendar, Users, Activity } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const Activities = () => {
   const activityStats = [
@@ -89,14 +90,14 @@ const Activities = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-pink-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Student Activities</h1>
-          <p className="text-xl text-orange-100">
-            Comprehensive programs for physical development, creative expression, and character building
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Activity size={48} />}
+        title="Student Activities"
+        subtitle="Comprehensive programs for physical development, creative expression, and character building"
+        gradientFrom="from-orange-600"
+        gradientTo="to-pink-600"
+        textColor="text-orange-100"
+      />
 
       {/* Activity Statistics */}
       <section className="py-16 bg-white">
@@ -133,7 +134,7 @@ const Activities = () => {
                     <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
                     <p className="text-blue-100">{category.description}</p>
                   </div>
-                  
+
                   <div className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Popular Activities:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -229,7 +230,7 @@ const Activities = () => {
               <h3 className="text-xl font-semibold mb-2">Teamwork Skills</h3>
               <p className="text-blue-100">Learning to collaborate and work effectively in groups</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Trophy size={32} />
@@ -237,7 +238,7 @@ const Activities = () => {
               <h3 className="text-xl font-semibold mb-2">Leadership Qualities</h3>
               <p className="text-blue-100">Developing confidence and leadership abilities</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Palette size={32} />
@@ -245,7 +246,7 @@ const Activities = () => {
               <h3 className="text-xl font-semibold mb-2">Creative Expression</h3>
               <p className="text-blue-100">Nurturing artistic talents and creative thinking</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">💪</span>
@@ -263,7 +264,7 @@ const Activities = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">How to Participate</h2>
             <p className="text-xl text-gray-600 mb-8">
-              All students are encouraged to participate in various activities throughout the academic year. 
+              All students are encouraged to participate in various activities throughout the academic year.
               Activities are scheduled after regular class hours and on weekends.
             </p>
 

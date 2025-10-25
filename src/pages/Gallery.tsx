@@ -10,6 +10,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { categories, galleryItems, imageFiles } from '../data/galleryData';
+import Hero from '../components/Hero';
 
 
 const Gallery = () => {
@@ -74,17 +75,14 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <Camera size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">Photo & Video Gallery</h1>
-          </div>
-          <p className="text-xl text-teal-100">
-            Capturing memories and celebrating moments from our vibrant school life
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Camera size={48} />}
+        title="Photo & Video Gallery"
+        subtitle="Capturing memories and celebrating moments from our vibrant school life"
+        gradientFrom="from-teal-600"
+        gradientTo="to-blue-600"
+        textColor="text-teal-100"
+      />
 
       {/* Gallery Statistics */}
       <section className="py-12 bg-white">

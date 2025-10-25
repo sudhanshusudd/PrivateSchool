@@ -8,7 +8,9 @@ import {
   Trophy,
   Bus,
   TestTubes,
+  Building2,
 } from "lucide-react";
+import Hero from "../components/Hero";
 
 const Infrastructure = () => {
   const facilities = [
@@ -112,14 +114,14 @@ const Infrastructure = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Infrastructure</h1>
-          <p className="text-xl text-purple-100">
-            World-class facilities designed to enhance learning and development
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Building2 size={48} />}
+        title="Infrastructure"
+        subtitle="World-class facilities designed to enhance learning and development"
+        gradientFrom="from-purple-600"
+        gradientTo="to-blue-600"
+        textColor="text-purple-100"
+      />
 
       {/* Overview */}
       <section className="py-16 bg-white">

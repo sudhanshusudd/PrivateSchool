@@ -6,7 +6,6 @@ const DocumentInformation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ Sidebar Quick Links in camelCase
   const quickLinks = [
     { title: "General Information", path: "/mpd" },
     { title: "Document And Information", path: "/documentInformation" },
@@ -28,7 +27,7 @@ const DocumentInformation = () => {
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide uppercase">
+          <h1 className="text-5xl font-bold mb-2 tracking-wide">
             Document & Information
           </h1>
         </div>
@@ -50,8 +49,8 @@ const DocumentInformation = () => {
                     key={index}
                     onClick={() => navigate(link.path)}
                     className={`flex items-center justify-between px-4 py-3 text-sm font-medium rounded-md cursor-pointer border transition-all duration-200 ${isActive
-                        ? "bg-blue-600 text-white border-blue-700 shadow-sm"
-                        : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
+                      ? "bg-blue-900 text-white border-blue-900 shadow-sm"
+                      : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
                       }`}
                   >
                     <span>{link.title}</span>
@@ -74,7 +73,7 @@ const DocumentInformation = () => {
             <div className="overflow-x-auto">
               <table className="w-full border text-sm text-left">
                 <thead>
-                  <tr className="bg-blue-600 text-white uppercase text-sm">
+                  <tr className="bg-blue-900 text-white text-sm">
                     <th className="px-4 py-3 border w-20 text-center">Sl. No.</th>
                     <th className="px-4 py-3 border">Documents and Information</th>
                     <th className="px-4 py-3 border w-48 text-center">Upload Documents</th>
@@ -90,7 +89,7 @@ const DocumentInformation = () => {
                     <td className="px-4 py-3 border text-center">
                       <button
                         onClick={handleOpenPdf}
-                        className="bg-blue-600 text-white px-4 py-1.5 rounded border border-blue-700 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
                       </button>

@@ -55,24 +55,51 @@ const Home = () => {
     <div className="space-y-0">
 
       <section className="relative w-full text-white overflow-hidden">
+        {/* Background image */}
         <img
           src="/hero.png"
           alt="Hero"
-          className="w-full h-auto object-contain"
+          className="w-full h-[60vh] sm:h-[70vh] lg:h-auto object-cover object-center"
         />
 
+        {/* Overlay for better readability */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-        <div className="absolute inset-0 flex items-center justify-center px-4">
+        {/* Hero content */}
+        <div className="absolute inset-0 flex items-center justify-center px-4 lg:px-16">
           <div className="max-w-4xl text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight -mt-[450px] whitespace-nowrap">
-              Welcome to <span className="text-yellow-400">Buds Garden School</span>
+            {/* Title */}
+            <h1
+              className="
+          text-3xl sm:text-4xl lg:text-6xl
+          font-bold mb-6 leading-tight
+          lg:-mt-[450px]  /* keep same offset on large screens */
+          mt-0
+        "
+            >
+              Welcome to{" "}
+              <span className="text-yellow-400">Buds Garden School</span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl">
+
+            {/* Description */}
+            <p
+              className="
+          text-base sm:text-lg lg:text-xl
+          mb-8 text-blue-100 leading-relaxed
+          max-w-3xl mx-auto lg:mx-0
+        "
+            >
               Nurturing Excellence, Building Future Leaders Through Quality Education,
               Character Development, and Holistic Growth Since 2009.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-4 mt-[200px]">
+
+            {/* Buttons */}
+            <div
+              className="
+          flex flex-col sm:flex-row justify-center lg:justify-start gap-4
+          mt-0 lg:mt-[200px] /* same spacing as before only for large screens */
+        "
+            >
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-yellow-500 text-blue-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
@@ -80,6 +107,7 @@ const Home = () => {
                 Apply for Admission
                 <ArrowRight size={20} className="ml-2" />
               </Link>
+
               <Link
                 to="/about"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-colors"
@@ -90,6 +118,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
       {/* Quick Links */}
       <section className="py-8 bg-gray-100">

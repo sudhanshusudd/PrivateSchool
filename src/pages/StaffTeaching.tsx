@@ -6,7 +6,6 @@ const StaffTeaching = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ Sidebar Quick Links in camelCase
   const quickLinks = [
     { title: "General Information", path: "/mpd" },
     { title: "Document And Information", path: "/documentInformation" },
@@ -15,7 +14,6 @@ const StaffTeaching = () => {
     { title: "School Infrastructure", path: "/schoolInfrastructure" },
   ];
 
-  // ✅ Teaching Staff Data in camelCase
   const staffData = [
     { label: "principal", value: "1" },
     { label: "totalNoOfTeachers", value: "34" },
@@ -36,7 +34,7 @@ const StaffTeaching = () => {
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide uppercase">
+          <h1 className="text-5xl font-bold mb-2 tracking-wide">
             Staff (Teaching)
           </h1>
         </div>
@@ -58,8 +56,8 @@ const StaffTeaching = () => {
                     key={index}
                     onClick={() => navigate(link.path)}
                     className={`flex items-center justify-between px-4 py-3 text-sm font-medium rounded-md cursor-pointer border transition-all duration-200 ${isActive
-                        ? "bg-blue-600 text-white border-blue-700 shadow-sm"
-                        : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
+                      ? "bg-blue-900 text-white border-blue-900 shadow-sm"
+                      : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-400"
                       }`}
                   >
                     <span>{link.title}</span>
@@ -75,15 +73,15 @@ const StaffTeaching = () => {
 
           {/* Staff Table */}
           <div className="lg:col-span-3 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-            <h2 className="text-2xl font-bold text-gray-800 px-6 py-4 border-b bg-gray-50 uppercase">
-              staff (teaching) information details
+            <h2 className="text-2xl font-bold text-gray-800 px-6 py-4 border-b bg-gray-50">
+              Staff (Teaching) Information Details
             </h2>
 
             <table className="min-w-full border-collapse text-sm">
               <thead>
-                <tr className="bg-blue-600 text-white text-left">
-                  <th className="px-6 py-3 font-semibold w-2/3">information</th>
-                  <th className="px-6 py-3 font-semibold w-1/3">details</th>
+                <tr className="bg-blue-900 text-white text-left">
+                  <th className="px-6 py-3 font-semibold w-2/3">Information</th>
+                  <th className="px-6 py-3 font-semibold w-1/3">Details</th>
                 </tr>
               </thead>
               <tbody>

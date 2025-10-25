@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Download, Clock, BookOpen, Trophy, FileText } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const AcademicCalendar = () => {
   const [selectedMonth, setSelectedMonth] = useState('all');
@@ -172,17 +173,14 @@ const AcademicCalendar = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <Calendar size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">Academic Calendar 2024-25</h1>
-          </div>
-          <p className="text-xl text-teal-100">
-            Important dates and events for the academic year
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Calendar size={48} />}
+        title="Academic Calendar 2024-25"
+        subtitle="Important dates and events for the academic year"
+        gradientFrom="from-teal-600"
+        gradientTo="to-blue-600"
+        textColor="text-teal-100"
+      />
 
       {/* Download Section */}
       <section className="py-8 bg-gray-100">
@@ -215,11 +213,10 @@ const AcademicCalendar = () => {
               <button
                 key={month}
                 onClick={() => setSelectedMonth(month)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  selectedMonth === month
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedMonth === month
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
               >
                 {month === 'all' ? 'All Months' : month}
               </button>
@@ -239,19 +236,18 @@ const AcademicCalendar = () => {
                   <div key={index} className={`border-l-4 p-6 rounded-r-lg ${getEventColor(event.type)}`}>
                     <div className="flex items-start">
                       <div className="flex-shrink-0 mr-4">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                          event.type === 'academic' ? 'bg-blue-200' :
-                          event.type === 'exam' ? 'bg-red-200' :
-                          event.type === 'event' ? 'bg-green-200' :
-                          event.type === 'holiday' ? 'bg-yellow-200' :
-                          'bg-purple-200'
-                        }`}>
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${event.type === 'academic' ? 'bg-blue-200' :
+                            event.type === 'exam' ? 'bg-red-200' :
+                              event.type === 'event' ? 'bg-green-200' :
+                                event.type === 'holiday' ? 'bg-yellow-200' :
+                                  'bg-purple-200'
+                          }`}>
                           <Icon size={24} className={
                             event.type === 'academic' ? 'text-blue-700' :
-                            event.type === 'exam' ? 'text-red-700' :
-                            event.type === 'event' ? 'text-green-700' :
-                            event.type === 'holiday' ? 'text-yellow-700' :
-                            'text-purple-700'
+                              event.type === 'exam' ? 'text-red-700' :
+                                event.type === 'event' ? 'text-green-700' :
+                                  event.type === 'holiday' ? 'text-yellow-700' :
+                                    'text-purple-700'
                           } />
                         </div>
                       </div>
@@ -265,13 +261,12 @@ const AcademicCalendar = () => {
                         </div>
                         <p className="text-gray-700">{event.description}</p>
                         <div className="mt-2">
-                          <span className={`inline-block px-2 py-1 text-xs font-semibold rounded-full ${
-                            event.type === 'academic' ? 'bg-blue-200 text-blue-800' :
-                            event.type === 'exam' ? 'bg-red-200 text-red-800' :
-                            event.type === 'event' ? 'bg-green-200 text-green-800' :
-                            event.type === 'holiday' ? 'bg-yellow-200 text-yellow-800' :
-                            'bg-purple-200 text-purple-800'
-                          }`}>
+                          <span className={`inline-block px-2 py-1 text-xs font-semibold rounded-full ${event.type === 'academic' ? 'bg-blue-200 text-blue-800' :
+                              event.type === 'exam' ? 'bg-red-200 text-red-800' :
+                                event.type === 'event' ? 'bg-green-200 text-green-800' :
+                                  event.type === 'holiday' ? 'bg-yellow-200 text-yellow-800' :
+                                    'bg-purple-200 text-purple-800'
+                            }`}>
                             {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
                           </span>
                         </div>
@@ -290,7 +285,7 @@ const AcademicCalendar = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Quick Reference</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold text-blue-900 mb-3">Term Dates</h3>
@@ -338,7 +333,7 @@ const AcademicCalendar = () => {
                   <li>• Special events may have dress code requirements</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold mb-4">For Parents</h3>
                 <ul className="space-y-2 text-gray-300 text-left">

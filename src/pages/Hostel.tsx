@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Users, FileText, UserPlus, ArrowRight, Shield, Utensils, Wifi } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const Hostel = () => {
   const hostelFeatures = [
@@ -56,18 +57,14 @@ const Hostel = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Header Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center mb-6">
-            <Home size={48} className="mr-4" />
-            <h1 className="text-5xl font-bold">Hostel Accommodation</h1>
-          </div>
-          <p className="text-xl text-orange-100">
-            Comfortable and safe residential facilities for out-station students
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Home size={48} />}
+        title="Hostel Accommodation"
+        subtitle="Comfortable and safe residential facilities for out-station students"
+        gradientFrom="from-orange-600"
+        gradientTo="to-red-600"
+        textColor="text-orange-100"
+      />
 
       {/* Overview */}
       <section className="py-16 bg-white">
@@ -75,11 +72,11 @@ const Hostel = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">A Home Away from Home</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Our hostel facilities provide a safe, comfortable, and conducive environment for students 
-              to focus on their studies while developing independence and life skills. With modern 
+              Our hostel facilities provide a safe, comfortable, and conducive environment for students
+              to focus on their studies while developing independence and life skills. With modern
               amenities and caring supervision, we ensure every student feels at home.
             </p>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {hostelStats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -312,7 +309,7 @@ const Hostel = () => {
           <p className="text-xl text-gray-300 mb-8">
             For accommodation booking and general inquiries about our hostel facilities
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Hostel Warden (Boys)</h3>
@@ -320,7 +317,7 @@ const Hostel = () => {
               <p className="text-gray-300 mb-1">+91 123-456-7894</p>
               <p className="text-gray-300">boys.hostel@budsgardenschool.edu.in</p>
             </div>
-            
+
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Hostel Warden (Girls)</h3>
               <p className="text-gray-300 mb-1">Mrs. Meena Sharma</p>
