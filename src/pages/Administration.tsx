@@ -1,5 +1,6 @@
 import React from 'react';
 import { Users, Mail, Phone, Award, BookOpen, Star } from 'lucide-react';
+import { seniorFaculty } from '../data/administration';
 
 const Administration = () => {
   const leadership = [
@@ -66,40 +67,13 @@ const Administration = () => {
     { number: '15:1', label: 'Student-Teacher Ratio', icon: Star },
   ];
 
-  const seniorFaculty = [
-    {
-      name: 'Dr. Meera Agarwal',
-      department: 'Mathematics',
-      qualification: 'Ph.D Mathematics',
-      specialization: 'Advanced Mathematics, Statistics',
-      experience: '22 years',
-      achievements: ['Best Teacher Award 2023', 'Mathematics Olympiad Coach'],
-    },
-    {
-      name: 'Prof. Suresh Kumar',
-      department: 'Science',
-      qualification: 'M.Sc Physics, B.Ed',
-      specialization: 'Physics, Electronics',
-      experience: '18 years',
-      achievements: ['Science Fair Coordinator', 'Research Publication Author'],
-    },
-    {
-      name: 'Mrs. Rekha Menon',
-      department: 'English',
-      qualification: 'M.A English Literature',
-      specialization: 'Literature, Creative Writing',
-      experience: '16 years',
-      achievements: ['Literary Club Mentor', 'Drama Competition Winner'],
-    },
-    {
-      name: 'Mr. Vijay Sharma',
-      department: 'Physical Education',
-      qualification: 'M.P.Ed',
-      specialization: 'Sports Coaching, Fitness Training',
-      experience: '14 years',
-      achievements: ['State Level Sports Coach', 'Fitness Trainer Certification'],
-    },
-  ];
+  const getInitials = (name) => {
+    return name
+      .split(" ")
+      .map((word) => word.charAt(0))
+      .join("")
+      .toUpperCase();
+  };
 
   return (
     <div className="min-h-screen">
@@ -156,7 +130,7 @@ const Administration = () => {
                   <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-gray-500 text-sm">Photo</span>
                   </div>
-                  
+
                   <div className="text-center mb-4">
                     <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h3>
                     <p className="text-emerald-600 font-semibold mb-2">{leader.position}</p>
@@ -233,39 +207,33 @@ const Administration = () => {
             <p className="text-xl text-gray-600">Experienced educators leading their respective departments</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {seniorFaculty.map((faculty, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-start">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full mr-4 flex items-center justify-center flex-shrink-0">
-                    <span className="text-gray-500 text-xs">Photo</span>
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex flex-col h-full"
+              >
+                {/* Profile Section */}
+                <div className="flex items-center mb-3">
+                  {/* Initials Circle */}
+                  <div className="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-lg font-bold mr-4">
+                    {getInitials(faculty.name)}
                   </div>
-                  
-                  <div className="flex-grow">
-                    <div className="mb-3">
-                      <h3 className="text-xl font-bold text-gray-900">{faculty.name}</h3>
-                      <p className="text-emerald-600 font-semibold">{faculty.department}</p>
-                      <p className="text-gray-600 text-sm">{faculty.qualification}</p>
-                    </div>
 
-                    <div className="space-y-2 text-sm text-gray-700">
-                      <p><strong>Specialization:</strong> {faculty.specialization}</p>
-                      <p><strong>Experience:</strong> {faculty.experience}</p>
-                    </div>
+                  {/* Name & Basic Info */}
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 leading-tight">
+                      {faculty.name}
+                    </h3>
+                    <p className="text-emerald-600 font-medium text-sm">
+                      {faculty.designation}
+                    </p>
+                    <p className="text-gray-600 text-xs">{faculty.qualification}</p>
+                    <p><strong>Experience:</strong> {faculty.experience} years</p>
 
-                    <div className="mt-3">
-                      <h4 className="font-semibold text-gray-900 mb-1">Achievements:</h4>
-                      <ul className="text-sm text-gray-600">
-                        {faculty.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <Award size={12} className="text-yellow-500 mr-1 flex-shrink-0" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </div>
+
               </div>
             ))}
           </div>
@@ -273,32 +241,32 @@ const Administration = () => {
       </section>
 
       {/* Contact Administration */}
-    <section className="py-16 bg-gray-900 text-white">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-3xl font-bold mb-6">Contact Administration</h2>
-    <p className="text-xl text-gray-300 mb-8">
-      For administrative matters, academic inquiries, or to schedule meetings
-    </p>
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">Contact Administration</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            For administrative matters, academic inquiries, or to schedule meetings
+          </p>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
-      <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-        <h3 className="text-lg font-semibold mb-2 text-blue-400">
-          Academic Office
-        </h3>
-        <p className="text-gray-300 mb-2">+91 123-456-7891</p>
-        <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
-      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+              <h3 className="text-lg font-semibold mb-2 text-blue-400">
+                Academic Office
+              </h3>
+              <p className="text-gray-300 mb-2">+91 123-456-7891</p>
+              <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
+            </div>
 
-      <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-        <h3 className="text-lg font-semibold mb-2 text-blue-400">
-          Administration Office
-        </h3>
-        <p className="text-gray-300 mb-2">+91 123-456-7892</p>
-        <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+              <h3 className="text-lg font-semibold mb-2 text-blue-400">
+                Administration Office
+              </h3>
+              <p className="text-gray-300 mb-2">+91 123-456-7892</p>
+              <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
   );
