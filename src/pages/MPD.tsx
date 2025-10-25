@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import HeroImage from "../components/HeroImage";
 
 const MPD = () => {
   const navigate = useNavigate();
@@ -14,33 +15,19 @@ const MPD = () => {
     { title: "School Infrastructure", path: "/schoolInfrastructure" },
   ];
 
-  // ✅ Data from uploaded image in camelCase
   const schoolInfo = {
-    name: "BUDS GARDEN SCHOOL",
+    name: "Buds Garden School",
     affiliationNo: "3430311",
     schoolCode: "66510",
-    address: "AT-DALUDIH PO+PS RAJGANJ, DHANBAD, JHARKHAND.",
-    principalName: "MR PRAMOD KUMAR",
+    address: "At-Daludih PO+PS Rajganj, Dhanbad, Jharkhand.",
+    principalName: "MR Pramod Kumar",
     email: "budsgarden.rajganj@gmail.com",
     contact: "+91 9431376581 , +91 7631130006",
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <section
-        className="relative bg-cover bg-center py-24 text-white"
-        style={{
-          backgroundImage: "url('/infra/infra5.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide">
-            General Information
-          </h1>
-        </div>
-      </section>
+      <HeroImage title="General Information" backgroundImage="/infra/infra5.jpg" />
 
       {/* Main Content */}
       <section className="container mx-auto px-6 lg:px-12 py-16">
@@ -92,14 +79,14 @@ const MPD = () => {
 
                 <tr className="border-b hover:bg-gray-50 transition">
                   <td className="font-semibold px-6 py-4 border-r text-gray-700">
-                    Affiliation No. (if applicable)
+                    Affiliation No. (If Applicable)
                   </td>
                   <td className="px-6 py-4">{schoolInfo.affiliationNo}</td>
                 </tr>
 
                 <tr className="border-b hover:bg-gray-50 transition">
                   <td className="font-semibold px-6 py-4 border-r text-gray-700">
-                    School Code (if applicable)
+                    School Code (If Applicable)
                   </td>
                   <td className="px-6 py-4">{schoolInfo.schoolCode}</td>
                 </tr>

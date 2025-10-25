@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Trophy, Calendar, TrendingUp, Award, Users, Download } from 'lucide-react';
 import Hero from '../components/Hero';
+import { useNavigate } from 'react-router-dom';
 
 const Results = () => {
   const [selectedYear] = useState('2025');
   const [selectedClass] = useState('all');
-
+  const navigate = useNavigate();
   const resultsData = {
     '2025': {
       'X': {
@@ -270,15 +271,15 @@ const Results = () => {
             Join Buds Garden and be part of our legacy of academic achievement
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div onClick={() => navigate('/contact')} className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
               <Users size={20} className="mr-2" />
               Admission Inquiry
             </button>
-            <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors">
+            {/* <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors">
               <Download size={20} className="mr-2" />
               Download Prospectus
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

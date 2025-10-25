@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight, ExternalLink } from "lucide-react";
+import HeroImage from "../components/HeroImage";
 
 const SchoolInfrastructure = () => {
   const navigate = useNavigate();
@@ -15,14 +16,14 @@ const SchoolInfrastructure = () => {
   ];
 
   const infraData = [
-    { label: "totalCampusArea", value: "5225" },
-    { label: "numberAndSizeOfClassRooms", value: "30" },
-    { label: "numberAndSizeOfLabs", value: "5" },
-    { label: "internetFacility", value: "Yes" },
-    { label: "numberOfGirlsToilets", value: "12" },
-    { label: "numberOfBoysToilets", value: "12" },
+    { label: "Total Campus Area", value: "5225" },
+    { label: "Number And Size Of Class Rooms", value: "30" },
+    { label: "Number And Size Of Labs", value: "5" },
+    { label: "Internet Facility", value: "Yes" },
+    { label: "Number Of Girls Toilets", value: "12" },
+    { label: "Number Of Boys Toilets", value: "12" },
     {
-      label: "youtubeVideoLink",
+      label: "Youtube Video Link",
       value: "https://www.youtube.com/watch?v=35p6BktH51E",
       isLink: true,
     },
@@ -30,18 +31,7 @@ const SchoolInfrastructure = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <section
-        className="relative bg-cover bg-center py-24 text-white"
-        style={{ backgroundImage: "url('/infra/infra1.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide">
-            School Infrastructure
-          </h1>
-        </div>
-      </section>
+      <HeroImage title="School Infrastructure" backgroundImage="/infra/infra1.jpg" />
 
       {/* Main Content */}
       <section className="container mx-auto px-6 lg:px-12 py-16">

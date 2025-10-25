@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Building, MessageSquare, ArrowRight } from 'lucide-react';
+import { Users, Building, MessageSquare, ArrowRight, School } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const AboutUs = () => {
   const features = [
@@ -27,17 +28,14 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl font-bold mb-6">About Buds Garden School</h1>
-            <p className="text-xl text-blue-100 leading-relaxed">
-              Established in 2009, Buds Garden School has been a beacon of quality education,
-              nurturing young minds and shaping future leaders for nearly three decades.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Hero
+        icon={<School size={48} />}
+        title="About Buds Garden School"
+        subtitle="Established in 2009, Buds Garden School has been a beacon of quality education, nurturing young minds and shaping future leaders for nearly three decades."
+        gradientFrom="from-blue-600"
+        gradientTo="to-blue-800"
+        textColor="text-blue-100"
+      />
 
       {/* About Content */}
       <section className="py-16 bg-white">

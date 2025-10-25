@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Users, FileText, Calendar, ArrowRight, Award } from 'lucide-react';
+import { BookOpen, Users, FileText, Calendar, ArrowRight, Award, Book } from 'lucide-react';
+import Hero from '../components/Hero';
 
 const Academics = () => {
   const academicPrograms = [
@@ -61,14 +62,14 @@ const Academics = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Academics</h1>
-          <p className="text-xl text-indigo-100">
-            Excellence in education through comprehensive curriculum and innovative teaching methods
-          </p>
-        </div>
-      </section>
+      <Hero
+        icon={<Book size={48} />}
+        title="Academics"
+        subtitle="Excellence in education through comprehensive curriculum and innovative teaching methods"
+        gradientFrom="from-indigo-600"
+        gradientTo="to-purple-600"
+        textColor="text-indigo-100"
+      />
 
       {/* Academic Excellence Overview */}
       <section className="py-16 bg-white">
@@ -76,11 +77,11 @@ const Academics = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Academic Excellence</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Our academic program is designed to challenge students intellectually while providing 
-              the support they need to succeed. We follow the CBSE curriculum with innovative teaching 
+              Our academic program is designed to challenge students intellectually while providing
+              the support they need to succeed. We follow the CBSE curriculum with innovative teaching
               methodologies that make learning engaging and effective.
             </p>
-            
+
             {/* Achievement Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
@@ -115,9 +116,9 @@ const Academics = () => {
                       <Award size={48} className="text-indigo-500" />
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 mb-6">{program.description}</p>
-                  
+
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Subjects Offered:</h4>
                     <div className="flex flex-wrap gap-2">

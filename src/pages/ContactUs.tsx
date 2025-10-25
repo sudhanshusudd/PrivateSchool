@@ -80,13 +80,13 @@ ${message || 'No additional message.'}
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['+91 123-456-7890 (Main)', '+91 123-456-7891 (Admissions)'],
+      details: ['+91 9431376581 ', '+91 7631130006'],
       color: 'text-green-600',
     },
     {
       icon: Mail,
       title: 'Email Addresses',
-      details: ['info@budsgardenschool.edu.in', 'admissions@budsgardenschool.edu.in'],
+      details: ['budsgarden.rajganj@gmail.com'],
       color: 'text-purple-600',
     },
     {

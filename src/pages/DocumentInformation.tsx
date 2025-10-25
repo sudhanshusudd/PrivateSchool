@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import HeroImage from "../components/HeroImage";
 
 const DocumentInformation = () => {
   const navigate = useNavigate();
@@ -20,19 +21,7 @@ const DocumentInformation = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <section
-        className="relative bg-cover bg-center py-24 text-white"
-        style={{ backgroundImage: "url('/Academic/science exhibition4.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide">
-            Document & Information
-          </h1>
-        </div>
-      </section>
-
+      <HeroImage title="Document & Information" backgroundImage="/Academic/science exhibition4.jpg" />
       {/* Main Content */}
       <section className="container mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
@@ -84,7 +73,7 @@ const DocumentInformation = () => {
                   <tr className="border hover:bg-gray-50 transition">
                     <td className="px-4 py-3 border text-center font-medium">1</td>
                     <td className="px-4 py-3 border">
-                      Copies of affiliation/upgradation letter and recent extension of affiliation if any
+                      Copies Of Affiliation/Upgradation Letter And Recent Extension Of Affiliation If Any
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button

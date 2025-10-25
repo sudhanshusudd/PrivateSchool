@@ -45,9 +45,19 @@ const Header = () => {
     { name: "Contact Us", href: "/contact" },
   ];
 
-  // 👇 Fixed rule: show first 6 on desktop, rest go under "More"
   const visibleItems = navigation.slice(0, 6);
   const hiddenItems = navigation.slice(6);
+
+  const isItemActive = (item: typeof navigation[0]) => {
+    if (item.href === "/") {
+      return location.pathname === "/"; // exact match for home
+    }
+    if (location.pathname === item.href) return true;
+    if (item.children) {
+      return item.children.some((child) => location.pathname === child.href);
+    }
+    return false;
+  };
 
   return (
     <header className="bg-white shadow-lg w-full relative z-50">
@@ -87,7 +97,6 @@ const Header = () => {
       {/* Main Header */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
             <div className="w-12 h-12 flex items-center justify-center">
               <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
@@ -113,14 +122,13 @@ const Header = () => {
               >
                 <Link
                   to={item.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 transition-colors ${location.pathname.startsWith(item.href)
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-700 hover:bg-blue-50"
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${isItemActive(item) ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-blue-50"
                     }`}
                 >
-                  <span>{item.name}</span>
-                  {item.children && <ChevronDown size={14} />}
+                  {item.name}
                 </Link>
+
+
 
                 {item.children && activeDropdown === item.name && (
                   <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border z-50">
@@ -128,17 +136,18 @@ const Header = () => {
                       <Link
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50"
+                        className={`block px-4 py-3 text-sm ${location.pathname === child.href ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-blue-50"
+                          }`}
                       >
                         {child.name}
                       </Link>
                     ))}
                   </div>
                 )}
+
               </div>
             ))}
 
-            {/* More dropdown if extra items */}
             {hiddenItems.length > 0 && (
               <div
                 className="relative"

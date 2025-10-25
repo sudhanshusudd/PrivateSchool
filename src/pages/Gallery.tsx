@@ -66,10 +66,10 @@ const Gallery = () => {
   }, [openModal, modalImages]);
 
   const stats = [
-    { number: '100+', label: 'Photos' },
-    { number: '10+', label: 'Videos' },
-    { number: '15+', label: 'Events Covered' },
-    { number: '3', label: 'Years Archive' },
+    { number: '35+', label: 'Photos' },
+    { number: '0+', label: 'Videos' },
+    { number: '10+', label: 'Events Covered' },
+    // { number: '3', label: 'Years Archive' },
   ];
 
   return (
@@ -87,7 +87,7 @@ const Gallery = () => {
       {/* Gallery Statistics */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-teal-600 mb-2">{stat.number}</div>

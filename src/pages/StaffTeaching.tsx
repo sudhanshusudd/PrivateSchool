@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import HeroImage from "../components/HeroImage";
 
 const StaffTeaching = () => {
   const navigate = useNavigate();
@@ -15,30 +16,20 @@ const StaffTeaching = () => {
   ];
 
   const staffData = [
-    { label: "principal", value: "1" },
-    { label: "totalNoOfTeachers", value: "34" },
-    { label: "pgt", value: "9" },
-    { label: "tgt", value: "10" },
-    { label: "prt", value: "14" },
-    { label: "teacherSectionRatio", value: "1.41:1" },
-    { label: "specialEducatorDetails", value: "1" },
-    { label: "counsellorAndWellnessTeacherDetails", value: "1" },
+    { label: "Principal", value: "1" },
+    { label: "Total No Of Teachers", value: "34" },
+    { label: "Pgt", value: "9" },
+    { label: "Tgt", value: "10" },
+    { label: "Prt", value: "14" },
+    { label: "Teacher Section Ratio", value: "1.41:1" },
+    { label: "Special Educator Details", value: "1" },
+    { label: "Counsellor And Wellness Teacher Details", value: "1" },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <section
-        className="relative bg-cover bg-center py-24 text-white"
-        style={{ backgroundImage: "url('/cultural/cultural5.jpeg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-2 tracking-wide">
-            Staff (Teaching)
-          </h1>
-        </div>
-      </section>
+      <HeroImage title="Staff (Teaching)" backgroundImage="/cultural/cultural5.jpeg" />
+
 
       {/* Main Content */}
       <section className="container mx-auto px-6 lg:px-12 py-16">
