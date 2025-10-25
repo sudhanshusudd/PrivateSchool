@@ -286,7 +286,7 @@ const Infrastructure = () => {
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Controlled access entry points
+                    24/7 Power Backup
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>

@@ -10,8 +10,8 @@ const Administration = () => {
       position: 'Chairman',
       qualification: '',
       experience: '22+ years',
-      email: 'chairman@budsgardenschool.edu.in',
-      phone: '+91 9431376581 , +91 7631130006',
+      // email: 'chairman@budsgardenschool.edu.in',
+      // phone: '+91 9431376581 , +91 7631130006',
       description: 'Visionary leader committed to educational excellence and holistic development.',
     },
     {
@@ -19,8 +19,8 @@ const Administration = () => {
       position: 'Principal',
       qualification: 'M.A, B.Ed',
       experience: '25 years',
-      email: 'principal@budsgardenschool.edu.in',
-      phone: '+91 123-456-7891',
+      // email: 'principal@budsgardenschool.edu.in',
+      // phone: '+91 123-456-7891',
       description: 'Experienced educator focused on student-centered learning and academic achievement.',
     },
     {
@@ -28,8 +28,8 @@ const Administration = () => {
       position: 'Vice Principal',
       qualification: 'M.A, B.Ed',
       experience: '20 years',
-      email: 'vp@budsgardenschool.edu.in',
-      phone: '+91 123-456-7892',
+      // email: 'vp@budsgardenschool.edu.in',
+      // phone: '+91 123-456-7892',
       description: 'Dedicated administrator overseeing daily operations and student discipline.',
     },
   ];
@@ -140,11 +140,11 @@ const Administration = () => {
 
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center justify-center text-gray-600">
-                      <Mail size={16} className="mr-2" />
+                      {/* <Mail size={16} className="mr-2" /> */}
                       <span>{leader.email}</span>
                     </div>
                     <div className="flex items-center justify-center text-gray-600">
-                      <Phone size={16} className="mr-2" />
+                      {/* <Phone size={16} className="mr-2" /> */}
                       <span>{leader.phone}</span>
                     </div>
                   </div>
@@ -179,7 +179,7 @@ const Administration = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Areas of Focus:</h4>
+                  {/* <h4 className="font-semibold text-gray-900 mb-2">Areas of Focus:</h4> */}
                   <div className="flex flex-wrap gap-2">
                     {dept.subjects.map((subject, idx) => (
                       <span

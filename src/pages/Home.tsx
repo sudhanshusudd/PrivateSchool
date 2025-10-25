@@ -35,17 +35,17 @@ const Home = () => {
 
   const announcements = [
     {
-      date: '15 Jan 2024',
+      date: '',
       title: 'New Academic Session Begins',
       description: 'Classes for the new academic year 2024-25 commence from April 1st.',
     },
     {
-      date: '10 Jan 2024',
+      date: '',
       title: 'Sports Day Celebration',
       description: 'Annual sports day will be held on February 25th at the school ground.',
     },
     {
-      date: '05 Jan 2024',
+      date: '',
       title: 'Science Exhibition',
       description: 'Students to showcase innovative projects in the upcoming science fair.',
     },
@@ -201,7 +201,7 @@ const Home = () => {
             {announcements.map((item, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center mb-3">
-                  <Clock size={16} className="text-blue-600 mr-2" />
+                  {/* <Clock size={16} className="text-blue-600 mr-2" /> */}
                   <span className="text-sm text-gray-500">{item.date}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>

@@ -9,7 +9,7 @@ interface HeroImageProps {
 const HeroImage: React.FC<HeroImageProps> = ({
     title,
     backgroundImage,
-    minHeight = "400px", // same height as Hero
+    minHeight = "300px", // same height as Hero
 }) => {
     return (
         <section

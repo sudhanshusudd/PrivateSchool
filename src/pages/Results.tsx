@@ -57,12 +57,6 @@ const Results = () => {
     },
     {
       year: '2025',
-      title: 'State-Level Recognition',
-      description: '20 students among state toppers in various subjects',
-      icon: Award,
-    },
-    {
-      year: '2025',
       title: 'Excellence in Sciences',
       description: 'Highest number of students cleared JEE and NEET entrance exams',
       icon: TrendingUp,
@@ -167,7 +161,7 @@ const Results = () => {
                       <div className="space-y-4">
                         {currentResults.classX.results.map((student, index) => (
                           <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                            <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center justify-between mb-2 pr-4">
                               <h4 className="text-lg font-semibold text-gray-900">{student.name}</h4>
                               <span className="text-2xl font-bold text-purple-600">{student.percentage}</span>
                             </div>

@@ -19,8 +19,8 @@ const MPD = () => {
     name: "Buds Garden School",
     affiliationNo: "3430311",
     schoolCode: "66510",
-    address: "At-Daludih PO+PS Rajganj, Dhanbad, Jharkhand.",
-    principalName: "MR Pramod Kumar",
+    address: "At - Daludih, PO + PS - Rajganj, Dhanbad, Jharkhand",
+    principalName: "Mr. Pramod Kumar",
     email: "budsgarden.rajganj@gmail.com",
     contact: "+91 9431376581 , +91 7631130006",
   };

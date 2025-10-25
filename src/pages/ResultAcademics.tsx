@@ -68,7 +68,7 @@ const ResultAcademics = () => {
                   <tr className="bg-blue-900 text-white  text-sm">
                     <th className="px-4 py-3 border w-20 text-center">Sl. No.</th>
                     <th className="px-4 py-3 border">Documents And Information</th>
-                    <th className="px-4 py-3 border w-48 text-center">Upload Documents</th>
+                    <th className="px-4 py-3 border w-48 text-center">Download Documents</th>
                   </tr>
                 </thead>
                 <tbody>

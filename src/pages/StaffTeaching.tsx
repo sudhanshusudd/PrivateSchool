@@ -21,7 +21,7 @@ const StaffTeaching = () => {
     { label: "Pgt", value: "9" },
     { label: "Tgt", value: "10" },
     { label: "Prt", value: "14" },
-    { label: "Teacher Section Ratio", value: "1.41:1" },
+    { label: "Teacher Section Ratio", value: "14:1" },
     { label: "Special Educator Details", value: "1" },
     { label: "Counsellor And Wellness Teacher Details", value: "1" },
   ];

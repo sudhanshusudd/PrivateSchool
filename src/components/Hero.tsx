@@ -65,7 +65,7 @@ const Hero: React.FC<HeroProps> = ({
     return (
         <section
             className={`relative bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white flex items-center`}
-            style={{ minHeight: "400px" }} // <-- fixed min-height
+            style={{ minHeight: "300px" }} // <-- fixed min-height
         >
             <div className="container mx-auto px-6 md:px-10 lg:px-16">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">

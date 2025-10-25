@@ -16,7 +16,7 @@ const DocumentInformation = () => {
   ];
 
   const handleOpenPdf = () => {
-    window.open("/schoolFee.pdf", "_blank");
+    window.open("/", "_blank");
   };
 
   return (
@@ -65,7 +65,7 @@ const DocumentInformation = () => {
                   <tr className="bg-blue-900 text-white text-sm">
                     <th className="px-4 py-3 border w-20 text-center">Sl. No.</th>
                     <th className="px-4 py-3 border">Documents and Information</th>
-                    <th className="px-4 py-3 border w-48 text-center">Upload Documents</th>
+                    <th className="px-4 py-3 border w-48 text-center">Download Documents</th>
                   </tr>
                 </thead>
 

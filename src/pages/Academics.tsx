@@ -56,7 +56,7 @@ const Academics = () => {
     { metric: '100%', label: 'CBSE Pass Rate' },
     { metric: '95%', label: 'First Division Results' },
     { metric: '50+', label: 'Subject Toppers' },
-    { metric: '25:1', label: 'Student-Teacher Ratio' },
+    { metric: '14:1', label: 'Student-Teacher Ratio' },
   ];
 
   return (
