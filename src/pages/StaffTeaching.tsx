@@ -17,13 +17,15 @@ const StaffTeaching = () => {
 
   const staffData = [
     { label: "Principal", value: "1" },
-    { label: "Total No Of Teachers", value: "34" },
-    { label: "Pgt", value: "9" },
-    { label: "Tgt", value: "10" },
-    { label: "Prt", value: "14" },
+    { label: "Total No Of Teachers", value: "89" },
+    { label: "PGT", value: "18" },
+    { label: "TGT", value: "39" },
+    { label: "PRT", value: "19" },
+    { label: "PET", value: "2" },
     { label: "Teacher Section Ratio", value: "14:1" },
     { label: "Special Educator Details", value: "1" },
     { label: "Counsellor And Wellness Teacher Details", value: "1" },
+    { label: "Others", value: "7" },
   ];
 
   return (

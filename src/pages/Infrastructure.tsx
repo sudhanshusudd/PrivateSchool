@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Building,
   Wifi,
@@ -9,14 +9,31 @@ import {
   Bus,
   TestTubes,
   Building2,
+  X,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import Hero from "../components/Hero";
+import { LucideIcon } from "lucide-react";
+
+export type Activity = {
+  icon: LucideIcon;
+  title: string;
+  src: string;
+  description: string;
+  features: string[];
+  images: string[];
+};
 
 const Infrastructure = () => {
+  const [selectedImage, setSelectedImage] = useState<Activity | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  
   const facilities = [
     {
       icon: BookOpen,
       title: "Modern Classrooms",
+      src: "/Academic/Academic1.jpg",
       description:
         "Spacious, well-ventilated classrooms equipped with smart boards and modern teaching aids.",
       features: [
@@ -25,10 +42,18 @@ const Infrastructure = () => {
         "Ergonomic Furniture",
         "Natural Lighting",
       ],
+      images : [
+        "/Academic/Academic1.jpg",
+        "/Academic/science exhibition1.jpg",
+        "/Academic/science exhibition2.jpg",
+        "/Academic/science exhibition3.jpg",
+        "/Academic/science exhibition4.jpg"
+      ]
     },
     {
       icon: FlaskConical,
       title: "Science Laboratories",
+      src: "/Academic/Academic1.jpg",
       description:
         "State-of-the-art physics, chemistry, and biology labs with modern equipment.",
       features: [
@@ -37,10 +62,18 @@ const Infrastructure = () => {
         "Research Facilities",
         "Experiment Kits",
       ],
+      images : [
+        "/Academic/Academic1.jpg",
+        "/Academic/science exhibition1.jpg",
+        "/Academic/science exhibition2.jpg",
+        "/Academic/science exhibition3.jpg",
+        "/Academic/science exhibition4.jpg"
+      ]
     },
     {
       icon: Computer,
       title: "Computer Labs",
+      src: "/Academic/Academic1.jpg",
       description:
         "Multiple computer labs with latest hardware and software for digital literacy.",
       features: [
@@ -49,10 +82,18 @@ const Infrastructure = () => {
         "Programming Tools",
         "1:1 Computer Access",
       ],
+      images : [
+        "/Academic/Academic1.jpg",
+        "/Academic/science exhibition1.jpg",
+        "/Academic/science exhibition2.jpg",
+        "/Academic/science exhibition3.jpg",
+        "/Academic/science exhibition4.jpg"
+      ]
     },
     {
       icon: BookOpen,
       title: "Library",
+      src: "/Academic/Academic1.jpg",
       description:
         "Extensive collection of books, journals, and digital resources in our modern library.",
       features: [
@@ -61,22 +102,40 @@ const Infrastructure = () => {
         "Reading Spaces",
         "Research Section",
       ],
+      images : [
+        "/Academic/Academic1.jpg",
+        "/Academic/science exhibition1.jpg",
+        "/Academic/science exhibition2.jpg",
+        "/Academic/science exhibition3.jpg",
+        "/Academic/science exhibition4.jpg"
+      ]
     },
     {
       icon: Trophy,
       title: "Sports Complex",
+      src: "/Academic/Academic1.jpg",
       description:
         "Comprehensive sports facilities including playground, gymnasium, and indoor games.",
       features: [
         "Cricket Ground",
         "Basketball Court",
-        "Swimming Pool",
+        "Football Ground",
+        "Volleyball Court",
+        "badminton Court",
         "Gymnasium",
       ],
+      images : [
+        "/Academic/Academic1.jpg",
+        "/Academic/science exhibition1.jpg",
+        "/Academic/science exhibition2.jpg",
+        "/Academic/science exhibition3.jpg",
+        "/Academic/science exhibition4.jpg"
+      ]
     },
     {
       icon: TestTubes,
       title: "ATAL Tinkering Lab",
+      src: "/Academic/Academic1.jpg",
       description:
         "Innovation hub fostering creativity and STEM learning among students.",
       features: [
@@ -85,6 +144,13 @@ const Infrastructure = () => {
         "Design Thinking Projects",
         "Encouraging Problem-Solving Skills",
       ],
+      images : [
+        "/Academic/Academic1.jpg",
+        "/Academic/science exhibition1.jpg",
+        "/Academic/science exhibition2.jpg",
+        "/Academic/science exhibition3.jpg",
+        "/Academic/science exhibition4.jpg"
+      ]
     },
   ];
 
@@ -110,6 +176,47 @@ const Infrastructure = () => {
       description: "250-seater modern auditorium for events",
     },
   ];
+
+  const openGallery = (activity: Activity) => {
+      setSelectedImage(activity);
+      setCurrentIndex(null); // reset zoom modal
+    };
+  
+    const closeGallery = () => {
+      setSelectedImage(null);
+      setCurrentIndex(null);
+    };
+  
+    const openModal = (index: number) => {
+      setCurrentIndex(index);
+    };
+  
+    const closeModal = (e?: React.MouseEvent) => {
+      if (e) e.stopPropagation();
+      setCurrentIndex(null);
+    };
+  
+    const showPrev = (e: React.MouseEvent) => {
+      e.stopPropagation();
+      if (!selectedImage) return;
+  
+      setCurrentIndex((prev) =>
+        prev !== null && prev > 0
+          ? prev - 1
+          : selectedImage.images.length - 1
+      );
+    };
+  
+    const showNext = (e: React.MouseEvent) => {
+      e.stopPropagation();
+      if (!selectedImage) return;
+  
+      setCurrentIndex((prev) =>
+        prev !== null && prev < selectedImage.images.length - 1
+          ? prev + 1
+          : 0
+      );
+    };
 
   return (
     <div className="min-h-screen">
@@ -153,7 +260,7 @@ const Infrastructure = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
             {facilities.map((facility, index) => {
               const Icon = facility.icon;
               return (
@@ -161,17 +268,19 @@ const Infrastructure = () => {
                   key={index}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon size={32} className="text-blue-600" />
+                  <div className="p-6 grid grid-cols-1 md:grid-cols-3">
+                    <div className="flex flex-col items-start justify-start">
+                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <Icon size={25} className="text-blue-600" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3r">
+                        {facility.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 text-xs md:text-sm">
+                        {facility.description}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
-                      {facility.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 text-center">
-                      {facility.description}
-                    </p>
-                    <ul className="space-y-2">
+                    <ul className="p-2 flex flex-col items-start justify-end">
                       {facility.features.map((feature, idx) => (
                         <li
                           key={idx}
@@ -182,6 +291,11 @@ const Infrastructure = () => {
                         </li>
                       ))}
                     </ul>
+                    <div className="flex flex-row items-start justify-end">
+                    <div className="rounded-xl overflow-hidden w-[60%]">
+                      <img onClick={() => openGallery(facility)} src={facility.src} alt={facility.src} className="max-h-36 w-full cursor-pointer"/>
+                    </div>
+                  </div>
                   </div>
                 </div>
               );
@@ -189,6 +303,85 @@ const Infrastructure = () => {
           </div>
         </div>
       </section>
+
+             {/* 🖼️ Gallery Modal */}
+      {selectedImage && currentIndex === null && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          onClick={closeGallery}
+        >
+          <div
+            className="max-w-5xl w-full bg-white mx-4 p-4 rounded-lg h-96 overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-4 flex flex-row items-center justify-between">
+              <h1 className="text-base md:text-xl font-bold text-gray-700">
+                {selectedImage.title}
+              </h1>
+              <button className="text-red-500" onClick={closeGallery}>
+                <X />
+              </button>
+            </div>
+
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-y-auto max-h-96"> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {selectedImage.images.map((src, index) => (
+                <div
+                  key={index}
+                  className="w-full overflow-hidden rounded-lg shadow-md cursor-pointer border border-gray-200"
+                  onClick={() => openModal(index)}
+                >
+                  <img
+                    src={src}
+                    alt={src}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) =>
+                      (e.currentTarget.src =
+                        "https://via.placeholder.com/400x300?text=Image+Missing")
+                    }
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 🔍 Image Zoom Modal */}
+      {selectedImage && currentIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[60]"
+          onClick={closeModal}
+        >
+          <button
+            className="absolute top-4 right-4 text-red-500 hover:text-gray-300"
+            onClick={closeModal}
+          >
+            <X size={28} />
+          </button>
+            <button
+              className="absolute left-4 text-white hover:text-gray-300"
+              onClick={showPrev}
+            >
+              <ArrowLeft size={36} />
+            </button>
+          <div className="relative max-w-3xl w-full flex items-center justify-center px-4 md:px-0">
+            <img
+              src={selectedImage.images[currentIndex]}
+              alt="Preview"
+              className="max-h-[80vh] rounded-lg shadow-lg object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+          </div>
+            <button
+              className="absolute right-4 text-white hover:text-gray-300"
+              onClick={showNext}
+            >
+              <ArrowRight size={36} />
+            </button>
+        </div>
+      )}
 
       {/* Additional Facilities */}
       <section className="py-16 bg-white">

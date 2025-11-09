@@ -15,7 +15,7 @@ export const departments: Department[] = [
         name: "Admission Office",
         contacts: [
             { head: "Mr. Pramod Kumar", phone: "+91 9431376581" },
-            { head: "Mr. Dilip Kumar" },
+            { head: "Mr. Dilip Kumar", phone: "+91 9430771965" },
         ],
         email: "admissions@school.edu.in",
         description: "New student admissions and enrollment queries",
@@ -24,7 +24,7 @@ export const departments: Department[] = [
         name: "Academic Office",
         contacts: [
             { head: "Mr. Pramod Kumar", phone: "+91 9431376581" },
-            { head: "Mr. Amar Kumer Paul" },
+            { head: "Mr. Amar Kumar Paul", phone: "+91 7050526195" },
             { head: "Mr. Ajay Prasad Rout", phone: "+91 9431541709" },
             { head: "Mrs./Ms. Babita Devi", phone: "+91 9431168977" },
         ],
@@ -43,7 +43,7 @@ export const departments: Department[] = [
     {
         name: "Hostel Office",
         contacts: [
-            { head: "Mr. Dilip Kumar " },
+            { head: "Mr. Dilip Kumar ", phone: "+91 9430771965"  },
             { head: "Mr. Deepak Mahato", phone: "+91 8873915202" },
             { head: "Mr. Pradeep Kumar", phone: "+91 6201590362" },
         ],
@@ -54,8 +54,8 @@ export const departments: Department[] = [
         name: "Transport Department",
         contacts: [
             { head: "Mr. Sanjay Tiwary", phone: "+91 8789904562" },
-            { head: "Mr. Dilip Kumar" },
-            { head: "Mr. Deva Soren" },
+            { head: "Mr. Dilip Kumar", phone: "+91 9430771965"  },
+            { head: "Mr. Deva Soren", phone: "+91 7759011864" },
         ],
         email: "transport@school.edu.in",
         description: "School bus services and transportation",
@@ -72,8 +72,8 @@ export const departments: Department[] = [
     {
         name: "Teachers Training Cell",
         contacts: [
-            { head: "Mr. Pramod Kumar" },
-            { head: "Dr. Ajay Prasad Rout" },
+            { head: "Mr. Pramod Kumar", phone: "+91 9431376581" },
+            { head: "Dr. Ajay Prasad Rout", phone: "+91 9431541709" },
         ],
         email: "training@school.edu.in",
         description: "Coordination of teacher training, professional development, and workshops.",

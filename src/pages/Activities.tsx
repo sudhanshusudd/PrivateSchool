@@ -7,7 +7,7 @@ const Activities = () => {
   const activityStats = [
     { number: '50+', label: 'Activity Programs' },
     { number: '25+', label: 'Sports Events' },
-    { number: '15+', label: 'Cultural Activities' },
+    { number: '15+', label: 'Cultural / Entertainment' },
     { number: '100%', label: 'Student Participation' },
   ];
 
@@ -40,7 +40,7 @@ const Activities = () => {
 
   const achievements = [
     {
-      category: 'Sports',
+      category: 'Sports Achievements',
       achievements: [
         'State Champions - Basketball (Boys) 2023',
         'District Winners - Athletics (Girls) 2023',
@@ -49,7 +49,7 @@ const Activities = () => {
       ],
     },
     {
-      category: 'Cultural',
+      category: 'Cultural / Entertainment',
       achievements: [
         'First Prize - Inter-School Drama Competition 2023',
         'Best Classical Music Performance - Regional Level',
@@ -58,7 +58,7 @@ const Activities = () => {
       ],
     },
     {
-      category: 'Academic',
+      category: 'Academic Achievements',
       achievements: [
         'National Science Olympiad - 15 Qualifiers',
         'Mathematics Competition - State Toppers',
@@ -199,7 +199,7 @@ const Activities = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {achievements.map((category, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{category.category} Achievements</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{category.category}</h3>
                 <ul className="space-y-3">
                   {category.achievements.map((achievement, idx) => (
                     <li key={idx} className="flex items-start">

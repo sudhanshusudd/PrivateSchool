@@ -6,13 +6,13 @@ import Hero from '../components/Hero';
 const Administration = () => {
   const leadership = [
     {
-      name: 'Mr. Amar Kumar Pal',
+      name: 'Mr. Amar Kumar Paul',
       position: 'Chairman',
       qualification: '',
       experience: '22+ years',
       // email: 'chairman@budsgardenschool.edu.in',
       // phone: '+91 9431376581 , +91 7631130006',
-      description: 'Visionary leader committed to educational excellence and holistic development.',
+      // description: 'Visionary leader committed to educational excellence and holistic development.',
     },
     {
       name: 'Mr. Pramod Kumar',
@@ -21,7 +21,7 @@ const Administration = () => {
       experience: '25 years',
       // email: 'principal@budsgardenschool.edu.in',
       // phone: '+91 123-456-7891',
-      description: 'Experienced educator focused on student-centered learning and academic achievement.',
+      // description: 'Experienced educator focused on student-centered learning and academic achievement.',
     },
     {
       name: 'Mrs. Babita Rani',
@@ -30,14 +30,23 @@ const Administration = () => {
       experience: '20 years',
       // email: 'vp@budsgardenschool.edu.in',
       // phone: '+91 123-456-7892',
-      description: 'Dedicated administrator overseeing daily operations and student discipline.',
+      // description: 'Dedicated administrator overseeing daily operations and student discipline.',
+    },
+    {
+      name: 'Ajay P Rout',
+      position: 'Asst Principal/STNC',
+      qualification: 'BSc. BEd',
+      experience: '15 years',
+      // email: 'vp@budsgardenschool.edu.in',
+      // phone: '+91 123-456-7892',
+      // description: 'Dedicated administrator overseeing daily operations and student discipline.',
     },
   ];
 
   const departments = [
     {
       name: 'Academic Department',
-      head: 'Dr. Sunita Patel',
+      head: 'Pramod Chourasia, Ajay P Rout , Babita Rani',
       staff: 45,
       subjects: ['Mathematics', 'Science', 'English', 'Social Studies', 'Hindi', 'Computer Science'],
     },
@@ -55,7 +64,7 @@ const Administration = () => {
     },
     {
       name: 'Student Support Services',
-      head: 'Ms. Neha Singh',
+      head: 'Dilip kumar , Sanjay Kumar Tiwari, Santosh Kumar Sinha',
       staff: 8,
       subjects: ['Counseling', 'Career Guidance', 'Health Services', 'Library Services'],
     },
@@ -121,7 +130,7 @@ const Administration = () => {
             <p className="text-xl text-gray-600">Experienced leaders guiding our educational mission</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((leader, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="p-8">
@@ -136,18 +145,18 @@ const Administration = () => {
                     <p className="text-gray-500 text-sm">{leader.experience} experience</p>
                   </div>
 
-                  <p className="text-gray-700 text-center mb-4">{leader.description}</p>
+                  {/* <p className="text-gray-700 text-center mb-4">{leader.description}</p> */}
 
-                  <div className="space-y-2 text-sm">
+                  {/* <div className="space-y-2 text-sm">
                     <div className="flex items-center justify-center text-gray-600">
-                      {/* <Mail size={16} className="mr-2" /> */}
+                     <Mail size={16} className="mr-2" /> 
                       <span>{leader.email}</span>
                     </div>
                     <div className="flex items-center justify-center text-gray-600">
-                      {/* <Phone size={16} className="mr-2" /> */}
+                      <Phone size={16} className="mr-2" /> 
                       <span>{leader.phone}</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
@@ -251,7 +260,8 @@ const Administration = () => {
               <h3 className="text-lg font-semibold mb-2 text-blue-400">
                 Academic Office
               </h3>
-              <p className="text-gray-300 mb-2">+91 123-456-7891</p>
+              <p className="text-gray-300 mb-2">+91 9431376581, +91 7050526195</p>
+              <p className="text-gray-300 mb-2">+91 9431541709</p>
               <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
             </div>
 
@@ -259,7 +269,9 @@ const Administration = () => {
               <h3 className="text-lg font-semibold mb-2 text-blue-400">
                 Administration Office
               </h3>
-              <p className="text-gray-300 mb-2">+91 123-456-7892</p>
+              <p className="text-gray-300 mb-2">+91 9431376581, +91 7050526195</p>
+              <p className="text-gray-300 mb-2">+91 9431541709, +91 8789904562</p>
+              <p className="text-gray-300 mb-2">+91 9430771965</p>
               <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
             </div>
           </div>

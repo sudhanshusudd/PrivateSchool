@@ -48,7 +48,7 @@ export const categories = [
     { value: 'all', label: 'All Categories', icon: Camera },
     { value: 'Academic', label: 'Academic Events', icon: BookOpen },
     { value: 'sports', label: 'Sports & Athletics', icon: Award },
-    { value: 'cultural', label: 'Cultural Activities', icon: Users },
+    { value: 'cultural', label: 'Cultural / Entertainment', icon: Users },
     { value: 'infrastructure', label: 'Campus & Infrastructure', icon: Camera },
 ];
 
@@ -80,7 +80,7 @@ export const galleryItems = [
         type: 'image',
         category: 'cultural',
         year: '2024',
-        title: 'Cultural Activities',
+        title: 'Cultural / Entertainment',
         description: 'Highlights from our grand annual day event',
         thumbnail:
             'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400',

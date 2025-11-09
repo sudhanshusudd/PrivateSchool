@@ -15,8 +15,8 @@ const DocumentInformation = () => {
     { title: "School Infrastructure", path: "/schoolInfrastructure" },
   ];
 
-  const handleOpenPdf = () => {
-    window.open("/", "_blank");
+  const handleOpenPdf = (pdfPath: string) => {
+    window.open(pdfPath, "_blank");
   };
 
   return (
@@ -77,7 +77,91 @@ const DocumentInformation = () => {
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={handleOpenPdf}
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border hover:bg-gray-50 transition">
+                    <td className="px-4 py-3 border text-center font-medium">2</td>
+                    <td className="px-4 py-3 border">
+                      Safety Certificate
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border hover:bg-gray-50 transition">
+                    <td className="px-4 py-3 border text-center font-medium">3</td>
+                    <td className="px-4 py-3 border">
+                     Bulding Safety
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border hover:bg-gray-50 transition">
+                    <td className="px-4 py-3 border text-center font-medium">4</td>
+                    <td className="px-4 py-3 border">
+                     Fire Safety
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border hover:bg-gray-50 transition">
+                    <td className="px-4 py-3 border text-center font-medium">5</td>
+                    <td className="px-4 py-3 border">
+                      UDISE Certificate
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border hover:bg-gray-50 transition">
+                    <td className="px-4 py-3 border text-center font-medium">6</td>
+                    <td className="px-4 py-3 border">
+                      Water and Sanitation Certificate
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
+                      >
+                        Document
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border hover:bg-gray-50 transition">
+                    <td className="px-4 py-3 border text-center font-medium">7</td>
+                    <td className="px-4 py-3 border">
+                      RTE
+                    </td>
+                    <td className="px-4 py-3 border text-center">
+                      <button
+                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document

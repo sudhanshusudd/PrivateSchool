@@ -451,15 +451,20 @@ ${message || 'No additional message.'}
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <div className="bg-red-600 text-white p-6 rounded-lg">
+            <div className="bg-red-600 text-white py-6 px-8 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Emergency Hotline</h3>
-              <p className="text-2xl font-bold">+91 123-456-7890</p>
+              <p className="text-base md:text-xl font-bold">+91 9431376581</p>
+              <p className="text-base md:text-xl font-bold">+91 9431376581</p>
+              <p className="text-base md:text-xl font-bold">+91 7488306275</p>
+              <p className="text-base md:text-xl font-bold">+91 8789904562</p>
               <p className="text-red-200 text-sm">Available 24/7</p>
             </div>
 
-            <div className="bg-blue-600 text-white p-6 rounded-lg">
+            <div className="bg-blue-600 text-white py-6 px-8 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Principal's Office</h3>
-              <p className="text-2xl font-bold">+91 123-456-7891</p>
+              <p className="text-base md:text-xl font-bold">+91 9431376581</p>
+              <p className="text-base md:text-xl font-bold">+91 9431376581</p>
+              <p className="text-base md:text-xl font-bold">+91 7759011864</p>
               <p className="text-blue-200 text-sm">Office Hours Only</p>
             </div>
           </div>

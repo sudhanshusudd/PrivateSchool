@@ -22,9 +22,10 @@ const ChairmanMessage = () => {
               {/* Chairman's Photo */}
               <div className="text-center">
                 <div className="w-64 h-64 mx-auto bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
-                  <span className="text-gray-500">Chairman Photo</span>
+                  {/* <span className="text-gray-500">Chairman Photo</span> */}
+                  <img src="/chairman_image.jpeg" alt="chairman_image" className='w-full rounded-lg' />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Mr. Amar Kumar Pal</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Mr. Amar Kumar Paul</h3>
                 <p className="text-lg text-gray-600">Chairman</p>
                 <p className="text-sm text-gray-500 mt-2"></p>
               </div>
@@ -97,7 +98,7 @@ const ChairmanMessage = () => {
                   </p>
 
                   <div className="mt-8">
-                    <p className="font-bold text-xl text-blue-900">Mr. Amar Kumar Pal</p>
+                    <p className="font-bold text-xl text-blue-900">Mr. Amar Kumar Paul</p>
                     <p className="text-gray-600">Chairman, Buds Garden School</p>
                   </div>
                 </div>

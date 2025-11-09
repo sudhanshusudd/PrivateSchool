@@ -113,6 +113,20 @@ const MPD = () => {
                     {schoolInfo.email}
                   </td>
                 </tr>
+                <tr className="border-b hover:bg-gray-50 transition">
+                  <td className="font-semibold px-6 py-4 border-r text-gray-700">
+                    Website Address
+                  </td>
+                  <td className="px-6 py-4 text-blue-700 hover:underline cursor-pointer">
+                    <a
+                      href="https://www.budsgardenschool.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      www.budsgardenschool.in
+                    </a>
+                  </td>
+                </tr>
 
                 <tr className="hover:bg-gray-50 transition">
                   <td className="font-semibold px-6 py-4 border-r text-gray-700">

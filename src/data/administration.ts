@@ -1,6 +1,7 @@
 export const seniorFaculty = [
     { name: 'PRAMOD KUMAR', designation: 'PRINCIPAL', qualification: 'M. A., B. ED.', experience: 12 },
     { name: 'BABITA RANI', designation: 'VICE PRINCIPAL', qualification: 'M.SC., B. ED.', experience: 10 },
+    { name: 'AJAY P ROUT', designation: 'A.P. / STNC', qualification: 'BSc. BEd', experience: 15 },
     { name: 'ARCHANA KUMARI', designation: 'PGT', qualification: 'M.A., B. ED.', experience: 10 },
     { name: 'PUSHPA DUBEY', designation: 'PGT', qualification: 'M.A., B. ED.', experience: 9 },
     { name: 'SOUMEN SEN', designation: 'PGT', qualification: 'M.SC., B. ED.', experience: 10 },
