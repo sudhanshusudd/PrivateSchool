@@ -52,7 +52,7 @@ const Administration = () => {
     },
     {
       name: 'Primary Section',
-      head: 'Mrs. Kavita Joshi',
+      head: 'Mrs. Pushpa Dubey',
       staff: 25,
       subjects: ['Foundation Studies', 'Creative Arts', 'Physical Education', 'Moral Science'],
     },
@@ -262,7 +262,7 @@ const Administration = () => {
               </h3>
               <p className="text-gray-300 mb-2">+91 9431376581, +91 7050526195</p>
               <p className="text-gray-300 mb-2">+91 9431541709</p>
-              <p className="text-gray-300">academic@budsgardenschool.edu.in</p>
+              <p className="text-gray-300">budsgarden.rajganj@gmail.com</p>
             </div>
 
             <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
@@ -272,7 +272,7 @@ const Administration = () => {
               <p className="text-gray-300 mb-2">+91 9431376581, +91 7050526195</p>
               <p className="text-gray-300 mb-2">+91 9431541709, +91 8789904562</p>
               <p className="text-gray-300 mb-2">+91 9430771965</p>
-              <p className="text-gray-300">admin@budsgardenschool.edu.in</p>
+              <p className="text-gray-300">budsgarden.rajganj@gmail.com</p>
             </div>
           </div>
         </div>
