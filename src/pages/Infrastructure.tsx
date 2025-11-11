@@ -43,17 +43,17 @@ const Infrastructure = () => {
         "Natural Lighting",
       ],
       images : [
-        "/Academic/Academic1.jpg",
-        "/Academic/science exhibition1.jpg",
-        "/Academic/science exhibition2.jpg",
-        "/Academic/science exhibition3.jpg",
-        "/Academic/science exhibition4.jpg"
+        "/ModernClassrooms/ModernClassrooms1.jpg",
+        "/ModernClassrooms/ModernClassrooms2.jpg",
+        "/ModernClassrooms/ModernClassrooms3.jpg",
+        "/ModernClassrooms/ModernClassrooms4.jpg",
+        "/ModernClassrooms/ModernClassrooms5.jpg"
       ]
     },
     {
       icon: FlaskConical,
       title: "Science Laboratories",
-      src: "/Academic/Academic1.jpg",
+      src: "/ScienceLabs/ScienceLab1.jpg",
       description:
         "State-of-the-art physics, chemistry, and biology labs with modern equipment.",
       features: [
@@ -63,17 +63,17 @@ const Infrastructure = () => {
         "Experiment Kits",
       ],
       images : [
-        "/Academic/Academic1.jpg",
-        "/Academic/science exhibition1.jpg",
-        "/Academic/science exhibition2.jpg",
-        "/Academic/science exhibition3.jpg",
-        "/Academic/science exhibition4.jpg"
+        "/ScienceLabs/ScienceLab1.jpg",
+        "/ScienceLabs/ScienceLab2.jpg",
+        "/ScienceLabs/ScienceLab3.jpg",
+        "/ScienceLabs/ScienceLab4.jpg",
+        "/ScienceLabs/ScienceLab5.jpg"
       ]
     },
     {
       icon: Computer,
       title: "Computer Labs",
-      src: "/Academic/Academic1.jpg",
+      src: "/ComputerLabs/ComputerLab1.jpg",
       description:
         "Multiple computer labs with latest hardware and software for digital literacy.",
       features: [
@@ -83,17 +83,17 @@ const Infrastructure = () => {
         "1:1 Computer Access",
       ],
       images : [
-        "/Academic/Academic1.jpg",
-        "/Academic/science exhibition1.jpg",
-        "/Academic/science exhibition2.jpg",
-        "/Academic/science exhibition3.jpg",
-        "/Academic/science exhibition4.jpg"
+        "/ComputerLabs/ComputerLab1.jpg",
+        "/ComputerLabs/ComputerLab2.jpg",
+        "/ComputerLabs/ComputerLab3.jpg",
+        "/ComputerLabs/ComputerLab4.jpg",
+        "/ComputerLabs/ComputerLab5.jpg"
       ]
     },
     {
       icon: BookOpen,
       title: "Library",
-      src: "/Academic/Academic1.jpg",
+      src: "/Library/Library2.jpg",
       description:
         "Extensive collection of books, journals, and digital resources in our modern library.",
       features: [
@@ -103,17 +103,17 @@ const Infrastructure = () => {
         "Research Section",
       ],
       images : [
-        "/Academic/Academic1.jpg",
-        "/Academic/science exhibition1.jpg",
-        "/Academic/science exhibition2.jpg",
-        "/Academic/science exhibition3.jpg",
-        "/Academic/science exhibition4.jpg"
+        "/Library/Library1.jpg",
+        "/Library/Library2.jpg",
+        "/Library/Library3.jpg",
+        "/Library/Library4.jpg",
+        "/Library/Library5.jpg"
       ]
     },
     {
       icon: Trophy,
       title: "Sports Complex",
-      src: "/Academic/Academic1.jpg",
+      src: "/SportsComplex/SportsComplex1.jpg",
       description:
         "Comprehensive sports facilities including playground, gymnasium, and indoor games.",
       features: [
@@ -125,17 +125,17 @@ const Infrastructure = () => {
         "Gymnasium",
       ],
       images : [
-        "/Academic/Academic1.jpg",
-        "/Academic/science exhibition1.jpg",
-        "/Academic/science exhibition2.jpg",
-        "/Academic/science exhibition3.jpg",
-        "/Academic/science exhibition4.jpg"
+        "/SportsComplex/SportsComplex1.jpg",
+        "/SportsComplex/SportsComplex2.jpg",
+        "/SportsComplex/SportsComplex3.jpeg",
+        "/SportsComplex/SportsComplex4.jpg",
+        "/SportsComplex/SportsComplex5.jpg"
       ]
     },
     {
       icon: TestTubes,
       title: "ATAL Tinkering Lab",
-      src: "/Academic/Academic1.jpg",
+      src: "/ATAL/Atal1.jpg",
       description:
         "Innovation hub fostering creativity and STEM learning among students.",
       features: [
@@ -145,11 +145,11 @@ const Infrastructure = () => {
         "Encouraging Problem-Solving Skills",
       ],
       images : [
-        "/Academic/Academic1.jpg",
-        "/Academic/science exhibition1.jpg",
-        "/Academic/science exhibition2.jpg",
-        "/Academic/science exhibition3.jpg",
-        "/Academic/science exhibition4.jpg"
+        "/ATAL/Atal1.jpg",
+        "/ATAL/Atal2.jpg",
+        "/ATAL/Atal3.jpg",
+        "/ATAL/Atal4.jpg",
+        "/ATAL/Atal5.jpg"
       ]
     },
   ];

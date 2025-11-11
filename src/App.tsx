@@ -30,7 +30,7 @@ import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-40">
+      <div className="min-h-screen bg-gray-50">
         <Header />
         <main>
           <Routes>

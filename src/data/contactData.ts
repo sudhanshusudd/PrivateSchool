@@ -26,7 +26,7 @@ export const departments: Department[] = [
             { head: "Mr. Pramod Kumar", phone: "+91 9431376581" },
             { head: "Mr. Amar Kumar Paul", phone: "+91 7050526195" },
             { head: "Mr. Ajay Prasad Rout", phone: "+91 9431541709" },
-            { head: "Mrs./Ms. Babita Devi", phone: "+91 9431168977" },
+            { head: "Mrs. Babita Rani", phone: "+91 9431168977" },
         ],
         email: "academic@school.edu.in",
         description: "Academic programs, curriculum, and student progress",
@@ -64,7 +64,7 @@ export const departments: Department[] = [
         name: "Fee Department",
         contacts: [
             { head: "Mr. Dilip Kumar", phone: "+91 9430771965" },
-            { head: "Dr. Deva Soren", phone: "+91 7759011864" },
+            { head: "Mr. Deva Soren", phone: "+91 7759011864" },
         ],
         email: "accounts@school.edu.in",
         description: "Fee payments, financial assistance, and billing",
@@ -73,7 +73,7 @@ export const departments: Department[] = [
         name: "Teachers Training Cell",
         contacts: [
             { head: "Mr. Pramod Kumar", phone: "+91 9431376581" },
-            { head: "Dr. Ajay Prasad Rout", phone: "+91 9431541709" },
+            { head: "Mr. Ajay Prasad Rout", phone: "+91 9431541709" },
         ],
         email: "training@school.edu.in",
         description: "Coordination of teacher training, professional development, and workshops.",

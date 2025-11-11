@@ -23,7 +23,7 @@ export const imageFiles = {
         "infra2.jpg",
         "infra3.jpg",
         "infra4.png",
-        "infra5.png",
+        "infra5.jpg",
         "infra6.jpg",
         "Lab1.png",
     ],

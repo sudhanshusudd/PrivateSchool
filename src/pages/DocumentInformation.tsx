@@ -77,7 +77,7 @@ const DocumentInformation = () => {
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/Affiliation certificate.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
@@ -87,11 +87,11 @@ const DocumentInformation = () => {
                   <tr className="border hover:bg-gray-50 transition">
                     <td className="px-4 py-3 border text-center font-medium">2</td>
                     <td className="px-4 py-3 border">
-                      Safety Certificate
+                      Society Certificate
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/Society certificate.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
@@ -101,11 +101,11 @@ const DocumentInformation = () => {
                   <tr className="border hover:bg-gray-50 transition">
                     <td className="px-4 py-3 border text-center font-medium">3</td>
                     <td className="px-4 py-3 border">
-                     Bulding Safety
+                     Building Safety
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/Building Safety.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
@@ -119,7 +119,7 @@ const DocumentInformation = () => {
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/Fire safety.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
@@ -133,7 +133,7 @@ const DocumentInformation = () => {
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/UDISE certificate.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
@@ -147,7 +147,7 @@ const DocumentInformation = () => {
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/Water and sanitation certificate.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document
@@ -161,7 +161,7 @@ const DocumentInformation = () => {
                     </td>
                     <td className="px-4 py-3 border text-center">
                       <button
-                        onClick={()=> handleOpenPdf("/documents/dummy-pdf_2.pdf")}
+                        onClick={()=> handleOpenPdf("/documents/RTE.pdf")}
                         className="bg-blue-900 text-white px-4 py-1.5 rounded border border-blue-900 hover:bg-blue-700 text-sm font-semibold shadow-sm transition"
                       >
                         Document

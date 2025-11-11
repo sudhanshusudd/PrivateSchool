@@ -310,20 +310,20 @@ const Hostel = () => {
             For accommodation booking and general inquiries about our hostel facilities
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-7 max-w-2xl mx-auto">
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Hostel Warden (Boys)</h3>
-              <p className="text-gray-300 mb-1">Mr. Suresh Patel</p>
-              <p className="text-gray-300 mb-1">+91 123-456-7894</p>
-              <p className="text-gray-300">boys.hostel@budsgardenschool.edu.in</p>
+              <p className="text-gray-300 mb-1">Mr. Dilip Kumar, Mr. Deepak Mahato, Mr. Pradeep Kumar</p>
+              <p className="text-gray-300 mb-1">+91 9430771965, +91 8873915202, +91 6201590362</p>
+              {/* <p className="text-gray-300">boys.hostel@budsgardenschool.edu.in</p> */}
             </div>
 
-            <div className="bg-gray-800 p-6 rounded-lg">
+            {/* <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-2">Hostel Warden (Girls)</h3>
               <p className="text-gray-300 mb-1">Mrs. Meena Sharma</p>
               <p className="text-gray-300 mb-1">+91 123-456-7895</p>
               <p className="text-gray-300">girls.hostel@budsgardenschool.edu.in</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -8,8 +8,9 @@ const Administration = () => {
     {
       name: 'Mr. Amar Kumar Paul',
       position: 'Chairman',
-      qualification: '',
+      qualification: 'M.Sc B.Ed',
       experience: '22+ years',
+      img:"/chairman_image.jpeg"
       // email: 'chairman@budsgardenschool.edu.in',
       // phone: '+91 9431376581 , +91 7631130006',
       // description: 'Visionary leader committed to educational excellence and holistic development.',
@@ -19,6 +20,7 @@ const Administration = () => {
       position: 'Principal',
       qualification: 'M.A, B.Ed',
       experience: '25 years',
+      img:"/principal_image.jpg"
       // email: 'principal@budsgardenschool.edu.in',
       // phone: '+91 123-456-7891',
       // description: 'Experienced educator focused on student-centered learning and academic achievement.',
@@ -28,15 +30,17 @@ const Administration = () => {
       position: 'Vice Principal',
       qualification: 'M.A, B.Ed',
       experience: '20 years',
+      img:"/babita_Image.jpg"
       // email: 'vp@budsgardenschool.edu.in',
       // phone: '+91 123-456-7892',
       // description: 'Dedicated administrator overseeing daily operations and student discipline.',
     },
     {
-      name: 'Ajay P Rout',
+      name: 'Ajay Prasad Rout',
       position: 'Asst Principal/STNC',
       qualification: 'BSc. BEd',
       experience: '15 years',
+      img:"/ajay_image.jpg"
       // email: 'vp@budsgardenschool.edu.in',
       // phone: '+91 123-456-7892',
       // description: 'Dedicated administrator overseeing daily operations and student discipline.',
@@ -135,7 +139,9 @@ const Administration = () => {
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="p-8">
                   <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo</span>
+                    {/* <span className="text-gray-500 text-sm">Photo</span> */}
+                    <img src={leader.img} alt={leader.name} className="w-24 h-24 rounded-full object-cover border-4 border-gray-200 shadow-md"
+        />
                   </div>
 
                   <div className="text-center mb-4">

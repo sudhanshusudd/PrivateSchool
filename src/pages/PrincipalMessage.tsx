@@ -23,9 +23,10 @@ const PrincipalMessage = () => {
               {/* Principal's Photo */}
               <div className="text-center">
                 <div className="w-64 h-64 mx-auto bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
-                  <span className="text-gray-500">Principal Photo</span>
+                  {/* <span className="text-gray-500">Principal Photo</span> */}
+                  <img src="/principal_image.jpg" alt="chairman_image" className='w-full rounded-lg' />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Mr. Pramod Kumar</h3>
+                <h3 className="mt-10 text-2xl font-bold text-gray-900">Mr. Pramod Kumar</h3>
                 <p className="text-lg text-gray-600">Principal</p>
                 <p className="text-sm text-gray-500 mt-2">M.A, B.Ed, 25 years experience</p>
               </div>

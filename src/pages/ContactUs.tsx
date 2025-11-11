@@ -425,17 +425,17 @@ ${message || 'No additional message.'}
 
               <div className="bg-white rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide transportation services?</h3>
-                <p className="text-gray-600">Yes, we operate a fleet of GPS-enabled buses covering most areas of the city. Transportation fees are separate from tuition fees.</p>
+                <p className="text-gray-600">Yes, we operate buses covering most areas of the town. Transportation fees are separate from tuition fees.</p>
               </div>
 
               <div className="bg-white rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">What is the student-teacher ratio?</h3>
-                <p className="text-gray-600">We maintain a low student-teacher ratio of 25:1 to ensure personalized attention and quality education for every student.</p>
+                <p className="text-gray-600">We maintain a low student-teacher ratio of 14:1 to ensure personalized attention and quality education for every student.</p>
               </div>
 
               <div className="bg-white rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Are hostel facilities available?</h3>
-                <p className="text-gray-600">Yes, we provide separate hostel facilities for boys and girls with modern amenities, nutritious meals, and 24/7 supervision.</p>
+                <p className="text-gray-600">Yes, we provide separate hostel facilities for boys with modern amenities, nutritious meals, and 24/7 supervision.</p>
               </div>
             </div>
           </div>
